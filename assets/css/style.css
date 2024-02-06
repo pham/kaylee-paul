@@ -11,6 +11,7 @@ html {
 
   --color-fade: lightblue;
   --color-dark: #05123d;
+  --color-light: #aaaaaa;
 
   box-sizing: border-box;
 }
@@ -33,10 +34,95 @@ body {
   height: 100%;
   overflow: hidden;
 }
-
 main {
-  min-height: 100vh;
+  min-height: 100vh !important;
   position: relative;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1000ms;
+  background-image: linear-gradient(157deg, #06113C, #143F6B);
+}
+
+.page h1 {
+  margin-top: 0;
+}
+
+.line-drawn {
+  background-color: var(--color-dark);
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #aaa;
+  box-shadow: rgba(0, 0, 0, .5) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #dddddd !important;
+  font-size: 1.2rem;
+  font-family: var(--font-serif);
+  line-height: 23px;
+  outline: none;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+}
+
+button.line-drawn {
+  align-self: center;
+  cursor: pointer;
+  display: inline-block;
+  padding: .75rem 2rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  visibility: visible;
+  opacity: 1;
+  transition: all opacity 500ms;
+}
+
+input.line-drawn {
+  padding: 1rem .75rem;
+  font-family: var(--font-sans);
+}
+
+.line-drawn.error {
+  border-color: red;
+}
+
+.input-group {
+  position: relative;
+}
+
+.line-drawn:hover, .line-drawn:active {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+.button-secondary {
+  background-color: var(--color-light);
+  color: var(--color-dark) !important;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.invisible {
+  opacity: 0;
+  visibility: hidden;
 }
 
 a, a:visited {
@@ -56,6 +142,9 @@ h1 + small {
   margin-top: -50px;
   color: var(--color-fade);
   font-size: 0.7em;
+}
+h1 + p {
+  margin: -50px 0 2em 0;
 }
 
 
@@ -123,7 +212,10 @@ code {
 }
 
 pre {
-  background: linear-gradient(rgba(0,0,0,0.05),rgba(0,0,0,0.05));
+  background: linear-gradient(
+    rgba(0,0,0,0.05),
+    rgba(0,0,0,0.05)
+  );
   padding: 10px;
 }
 
@@ -139,50 +231,14 @@ blockquote {
   font-family: var(--font-serif), serif;
 }
 
-.spacer {
-  margin-top: 4em;
-}
+.spacer-1 { margin-top: 1em; }
+.spacer-2 { margin-top: 2em; }
+.spacer-4 { margin-top: 4em; }
 
 blockquote small {
   display: block;
   margin-top: 1em;
   color: var(--color-fade);
-}
-
-.button-draw {
-  align-self: center;
-  background-color: var(--color-dark);
-  background-image: none;
-  background-position: 0 90%;
-  background-repeat: repeat no-repeat;
-  background-size: 4px 3px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #aaa;
-  box-shadow: rgba(0, 0, 0, .5) 15px 28px 25px -18px;
-  box-sizing: border-box;
-  color: #dddddd !important;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 1.2rem;
-  font-family: var(--font-serif);
-  line-height: 23px;
-  outline: none;
-  padding: .75rem 2rem;
-  text-decoration: none;
-  transition: all 235ms ease-in-out;
-  border-bottom-left-radius: 15px 255px;
-  border-bottom-right-radius: 225px 15px;
-  border-top-left-radius: 255px 15px;
-  border-top-right-radius: 15px 225px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-draw:hover, .button-draw:active {
-  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
-  transform: translate3d(0, 2px, 0);
 }
 
 .center-box-container {
@@ -191,7 +247,7 @@ blockquote small {
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: calc(100vh - 40px);
+  min-height: calc(100% - 40px);
 }
 
 .button {
@@ -216,3 +272,37 @@ blockquote small {
   color: white;
   font-family: var(--font-sans);
 }
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label {
+  top: -20px;
+  left: 0px;
+  font-size: 15px;
+  opacity: 1;
+}
+
+input:focus ~ .floating-label-bottom,
+input:not(:focus):valid ~ .floating-label-bottom {
+  opacity: 1;
+}
+
+.floating-label {
+  position: absolute;
+  pointer-events: none;
+  color: var(--color-light);
+  left: 20px;
+  top: 18px;
+  transition: 0.2s ease all;
+}
+
+.floating-label-bottom {
+  position: absolute;
+  pointer-events: none;
+  color: var(--color-light);
+  font-size: 15px;
+  bottom: -25px;
+  left: 0;
+  transition: 0.2s ease all;
+  opacity: 0;
+}
+
