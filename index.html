@@ -52,18 +52,33 @@ layout: default
     <span class='floating-label-bottom'>Including yourself</span>
   </div>
 
-  <div class='spacer-4'>
-    <button
+  <div class='input-group message-box spacer-4'>
+    <input required
+      name='message'
+      type='input'
       class='line-drawn'
-      data-id='rsvp'
-      onclick='respond(this)'
-    >Confirm</button>
+    />
+    <span class='floating-label'>Optional message</span>
+  </div>
 
+  <div class='spacer-4'>
     <button
       class='line-drawn button-main button-secondary'
       data-id='rsvp'
       onclick='toggleVisibility(this)'
     >Cancel</button>
+
+    <button
+      class='line-drawn button-red'
+      data-id='rsvp'
+      onclick='decline(this)'
+    >Decline</button>
+
+    <button
+      class='line-drawn'
+      data-id='rsvp'
+      onclick='accept(this)'
+    >Accept</button>
   </div>
 </section>
 
@@ -92,8 +107,28 @@ layout: default
 
   <div class='spacer-4'>
     <button
-      class='line-drawn button-main'
+      class='line-drawn button-main button-secondary'
       data-id='accepted'
+      onclick='toggleVisibility(this)'
+    >Close</button>
+
+    <button
+      class='line-drawn'
+      data-id='accepted'
+      onclick='page(this, "info")'
+    >Information</button>
+  </div>
+</section>
+
+<section id='declined' class='page center-box-container'>
+  <h1>rsvp declined</h1>
+
+  <div id='declined-content'></div>
+
+  <div class='spacer-4'>
+    <button
+      class='line-drawn button-main'
+      data-id='declined'
       onclick='toggleVisibility(this)'
     >Close</button>
   </div>
@@ -112,3 +147,31 @@ layout: default
     >Close</button>
   </div>
 </section>
+
+<section id='info' class='page center-box-container'>
+  <h1>event info</h1>
+
+  <p>
+    Please come celebrate with us:
+  </p>
+  <p>
+    February 29th, 2024<br/>
+    10 am
+  </p>
+  <p>
+    Milpitas Christian Church<br/>
+    <a href='https://maps.app.goo.gl/AtSUskFLbN7xFKXK9'>
+      1715 E. Calaveras Blvd.,<br/>
+      Milpitas, CA 95035
+    </a>
+  </p>
+
+  <div class='spacer-4'>
+    <button
+      class='line-drawn button-main'
+      data-id='info'
+      onclick='toggleVisibility(this)'
+    >Close</button>
+  </div>
+</section>
+

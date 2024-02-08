@@ -91,7 +91,7 @@ button.line-drawn {
   touch-action: manipulation;
   visibility: visible;
   opacity: 1;
-  transition: all opacity 500ms;
+  transition: opacity 500ms;
 }
 
 input.line-drawn {
@@ -112,10 +112,6 @@ input.line-drawn {
   transform: translate3d(0, 2px, 0);
 }
 
-.button-secondary {
-  background-color: var(--color-alt);
-}
-
 .visible {
   opacity: 1;
   visibility: visible;
@@ -131,11 +127,13 @@ a, a:visited {
   color: deepskyblue;
   text-decoration: none;
 }
+
 p {
   line-height: 1.6;
   font-family: var(--font-serif);
   font-size: 21px;
   margin-bottom: 10px;
+  padding: 0 1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -324,3 +322,24 @@ input:disabled {
   opacity: 0;
 }
 
+section:not(.visible) button {
+  display: none;
+}
+
+.button-secondary, .button-red {
+  padding: .75rem !important;
+}
+.button-secondary {
+  background-color: var(--color-alt);
+}
+.button-red {
+  background-color: #390202;
+}
+
+.message-box {
+  width: 90%;
+  max-width: 400px;
+}
+.message-box input {
+  width: 100%;
+}
