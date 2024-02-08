@@ -22,7 +22,7 @@ layout: default
 <section id='rsvp' class='page center-box-container'>
   <h1>rsvp</h1>
   <p>
-    Please confirm you're attending our wedding ceremony.
+    Please confirm whether you're attending our wedding.
   </p>
   <div class='input-group spacer-1'>
     <input required
@@ -56,7 +56,7 @@ layout: default
     <button
       class='line-drawn'
       data-id='rsvp'
-      onclick='confirm(this)'
+      onclick='respond(this)'
     >Confirm</button>
 
     <button
@@ -67,10 +67,10 @@ layout: default
   </div>
 </section>
 
-<section id='thanks' class='page center-box-container'>
+<section id='lookup' class='page center-box-container'>
   <h1>guest</h1>
 
-  <div id='content'/>
+  <div id='lookup-content'></div>
 
   <div class='spacer-4'>
     <button
@@ -80,6 +80,34 @@ layout: default
     <button
       class='line-drawn button-main button-secondary'
       data-id='thanks'
+      onclick='toggleVisibility(this)'
+    >Close</button>
+  </div>
+</section>
+
+<section id='accepted' class='page center-box-container'>
+  <h1>rsvp accepted</h1>
+
+  <div id='accepted-content'></div>
+
+  <div class='spacer-4'>
+    <button
+      class='line-drawn button-main'
+      data-id='accepted'
+      onclick='toggleVisibility(this)'
+    >Close</button>
+  </div>
+</section>
+
+<section id='error' class='page center-box-container'>
+  <h1>ooops!</h1>
+
+  <div id='error-content'></div>
+
+  <div class='spacer-4'>
+    <button
+      class='line-drawn button-main'
+      data-id='error'
       onclick='toggleVisibility(this)'
     >Close</button>
   </div>

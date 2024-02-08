@@ -1,8 +1,9 @@
 html {
   --font-mono: 'Share Tech Mono', monospace;
   --font-sans: 'Be Vietnam Pro', sans-serif;
-  --font-serif: 'Noto Serif Display', serif;
+  --font-serif: 'Cormorant Garamond', serif;
   --font-special: 'Montez', serif;
+  --font-name: 'Passions Conflict', serif;
 
   --blueColor: #0055A2;
   --goldColor: #e5a823;
@@ -12,6 +13,7 @@ html {
   --color-fade: lightblue;
   --color-dark: #05123d;
   --color-light: #aaaaaa;
+  --color-alt: black;
 
   box-sizing: border-box;
 }
@@ -32,7 +34,6 @@ body {
   padding: 0;
   background-image: linear-gradient(315deg, #06113C, #143F6B);
   height: 100%;
-  overflow: hidden;
 }
 main {
   min-height: 100vh !important;
@@ -49,6 +50,7 @@ main {
   visibility: hidden;
   transition: opacity 1000ms;
   background-image: linear-gradient(157deg, #06113C, #143F6B);
+  z-index: 0;
 }
 
 .page h1 {
@@ -111,13 +113,13 @@ input.line-drawn {
 }
 
 .button-secondary {
-  background-color: var(--color-light);
-  color: var(--color-dark) !important;
+  background-color: var(--color-alt);
 }
 
 .visible {
   opacity: 1;
   visibility: visible;
+  z-index: 2;
 }
 
 .invisible {
@@ -128,6 +130,12 @@ input.line-drawn {
 a, a:visited {
   color: deepskyblue;
   text-decoration: none;
+}
+p {
+  line-height: 1.6;
+  font-family: var(--font-serif);
+  font-size: 21px;
+  margin-bottom: 10px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -147,6 +155,9 @@ h1 + p {
   margin: -50px 0 2em 0;
 }
 
+.name {
+  font-family: var(--font-name);
+}
 
 body::-webkit-scrollbar {
   width: 6px;
@@ -274,6 +285,7 @@ blockquote small {
 }
 
 input:focus ~ .floating-label,
+input:disabled ~ .floating-label,
 input:not(:focus):valid ~ .floating-label {
   top: -20px;
   left: 0px;
@@ -282,8 +294,14 @@ input:not(:focus):valid ~ .floating-label {
 }
 
 input:focus ~ .floating-label-bottom,
+input:disabled ~ .floating-label-bottom,
 input:not(:focus):valid ~ .floating-label-bottom {
   opacity: 1;
+}
+
+button:disabled,
+input:disabled {
+  background-color: var(--color-light);
 }
 
 .floating-label {
