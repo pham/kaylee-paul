@@ -59,10 +59,10 @@ function makeRequest(method, path, payload) {
 }
 
 async function lookup(n) {
-  const content = document.getElementById('lookup-content');
   let info;
   try {
     info = await makeRequest('GET', `/id/${ID(n)}`);
+    info.data.id = ID(n);
   } catch {
     info = null;
   }
@@ -92,6 +92,20 @@ const restore = (e) => {
     .querySelectorAll('input')
     .forEach( i => i.disabled = false );
   e.disabled = false;
+};
+
+const populate = (divId, info) => {
+  document.getElementById(divId)
+    .querySelectorAll('input, button')
+    .forEach( e => {
+      e.disabled = false;
+
+      if (info?.confirmed !== undefined && ['phone','name'].includes(e.name))
+        e.disabled = true;
+
+      if (e.tagName === 'INPUT' && info)
+        e.value = info[e.name] || '';
+    });
 };
 
 async function respond(e, action) {
@@ -144,81 +158,127 @@ async function respond(e, action) {
   };
 }
 
+const now = () => Math.trunc(Date.now() / 1000);
+
 async function accept(e) {
-  const divId = e?.dataset?.id;
-  const el = document.getElementById(divId);
   const info = await respond(e);
+
+  if (!info) return;
 
   const { name, guests, phone, message, db: { short } } = info;
   const id = ID(phone);
 
-  let salutation = 'Your';
-
-  if (short)
-    salutation = `Dear ${short}, your`;
-
   try {
-    await makeRequest('POST', `/accept/${id}/${guests}`, {
-      message: `${message || ''} -- Name: ${name} -- Phone: ${phone}`,
-    });
-    page(el, 'accepted', 'accepted-content', `
-      <h1 class='name'>${name}</h1>
-      <p>
-        Thank you! You are confirmed for party of ${guests}.
-      </p>
-      <p>
-        ${salutation} presence will be a blessing to us!
-        We can't wait to celebrate this moment with you.
-      </p>
-
-      <p>
-        Love,<br/>
-        Paul & Kaylee
-      </p>
-    `);
+    const payload = {
+      message: `Name: ${name} -- Phone: ${phone}`
+    };
+    if (message) {
+      payload.message += `-- ${message}`;
+      payload.meta = { [`accepted-${now()}`]: message };
+    }
+    await makeRequest('POST', `/accept/${id}/${guests}`, payload);
+    restore(e);
+    location.href = `/status/${id}`;
   } catch (er) {
-    page(el, 'error', 'error-content', 'Sorry, I cannot confirm your request');
+    restore(e);
+    location.href = '/error';
   }
-
-  restore(e);
 }
 
 async function decline(e) {
-  const divId = e?.dataset?.id;
-  const el = document.getElementById(divId);
   const info = await respond(e);
+
+  if (!info) return;
 
   const { name, guests, phone, message, db: { short } } = info;
   const id = ID(phone);
 
-  let salutation = 'Your';
-
-  if (short)
-    salutation = `Dear ${short}, your`;
-
   try {
-    await makeRequest('POST', `/decline/${id}`, {
-      message: `${message || ''} -- Name: ${name} -- Phone: ${phone} -- Guests: ${guests}`,
-    });
-    page(el, 'declined', 'declined-content', `
-      <h1 class='name'>${name}</h1>
-      <p>
-        ${salutation} presence will be missed at our wedding!
-        Let's keep in touch.
-      </p>
-
-      <p>
-        Love,<br/>
-        Paul & Kaylee
-      </p>
-    `);
+    const payload = {
+      message: `Name: ${name} -- Phone: ${phone} -- Guests: ${guests}`
+    };
+    if (message) {
+      payload.message += `-- ${message}`;
+      payload.meta = { [`declined-${now()}`]: message };
+    }
+    await makeRequest('POST', `/decline/${id}`, payload);
+    restore(e);
+    location.href = `/status/${id}`;
   } catch (er) {
-    page(el, 'error', 'error-content', `
-      ${salutation} answer can't be recorded.
-      It's ok, we will miss you though.
-    `);
+    restore(e);
+    location.href = '/error';
   }
-
-  restore(e);
 }
 
+async function populateRsvp() {
+  const pug = location.hash.substr(1)
+    || location.pathname.split('/')[2];
+
+  if (!pug)
+    return populate('rsvp');
+
+  const id = ID(pug);
+  const info = await lookup(id);
+
+  if (!info || !info.success)
+    return populate('rsvp');
+
+  const {
+    name,
+    phone=id,
+    guests=1,
+    confirmed,
+    note,
+  } = info.data;
+
+  populate('rsvp', {
+    name,
+    phone,
+    guests,
+    confirmed,
+  });
+
+  if (note) {
+    const el = document.getElementById('note');
+    el.hidden = false;
+    el.innerHTML = note;
+  }
+
+  if (confirmed !== undefined) {
+    document.getElementById(confirmed ? '_accepted' : '_declined').hidden = false;
+  }
+}
+
+async function info() {
+  const pug = location.hash.substr(1)
+    || location.pathname.split('/')[2];
+
+  if (!pug) return;
+
+  return await lookup(pug);
+}
+
+function toggleHidden(confirmed, accepted, declined) {
+  document.getElementById(confirmed ? accepted : declined).hidden = false;
+}
+
+async function list() {
+  const pug = location.hash.substr(1)
+    || location.pathname.split('/')[2];
+
+  const info = await makeRequest('GET', '/list');
+
+  if (!info?.data) return;
+
+  const {data} = info;
+  const arr = [];
+
+  for (const id in data) {
+    const { name,confirmed,guests,type } = data[id];
+    arr.push({
+      name, id, guests, confirmed, type
+    });
+  }
+
+  return arr.sort( (a,b) => a.type - b.type );
+}
