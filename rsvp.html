@@ -1,0 +1,81 @@
+---
+layout: default
+---
+
+<section id='rsvp' class='page center-box-container visible'>
+  {% include logo.html %}
+
+  <h1>rsvp</h1>
+  <p>
+    Please let us know if you're attending.
+    Our wedding will be on February 29th at 10 am.
+  </p>
+
+  <p hidden id='note'></p>
+
+  <div class='input-group spacer-1'>
+    <input required disabled
+      name='name'
+      type='text'
+      class='line-drawn'
+    />
+    <span class='floating-label'>Full name</span>
+  </div>
+
+  <div class='input-group spacer-2'>
+    <input required disabled
+      name='phone'
+      type='tel'
+      class='line-drawn'
+    />
+    <span class='floating-label'>Mobile phone</span>
+  </div>
+
+  <div class='input-group spacer-2'>
+    <input required disabled
+      name='guests'
+      type='number'
+      pattern='[0-9]*'
+      class='line-drawn'
+    />
+    <span class='floating-label'>Number of guests</span>
+    <span class='floating-label-bottom'>Including yourself</span>
+  </div>
+
+  <div class='spacer-4'>
+    <p hidden id='_accepted'>
+      You've already accepted our invitation, you can update the number of guests.
+      Please send us a note and let us know.
+    </p>
+    <p hidden id='_declined'>
+      You've already declined our invitation.
+      However, if you've changed your mind, we'd love it if you can join us.
+    </p>
+  </div>
+  <div class='input-group message-box spacer-1'>
+    <input required disabled
+      name='message'
+      type='input'
+      class='line-drawn'
+    />
+    <span class='floating-label'>Optional message</span>
+  </div>
+
+  <div class='spacer-4'>
+    <button disabled
+      class='line-drawn button-red'
+      data-id='rsvp'
+      onclick='decline(this)'
+    >Decline</button>
+
+    <button disabled
+      class='line-drawn'
+      data-id='rsvp'
+      onclick='accept(this)'
+    >Accept</button>
+  </div>
+</section>
+
+<script>
+  populateRsvp();
+</script>

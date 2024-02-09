@@ -1,0 +1,68 @@
+---
+layout: default
+---
+<section id='status' class='page center-box-container visible'>
+  {% include logo.html %}
+  <h1>rsvp <span hidden></span></h1>
+
+  <div hidden id='_accepted'>
+    <h1 class='name'></h1>
+    <p>
+      Thank you! You are confirmed for party of:
+      <span class='large'></span>
+    </p>
+    <p>
+      <span class='short'>Your</span> presence will be a blessing to us!
+      We can't wait to share our special moment with you!
+    </p>
+    <p>
+      Love,<br/>
+      Paul + Kaylee
+    </p>
+  </div>
+  <div hidden id='_declined'>
+    <h1 class='name'></h1>
+    <p>
+      <span class='short'>Your</span> presence will be missed at our wedding!
+      Please keep in touch.
+    </p>
+
+    <p>
+      Love,<br/>
+      Paul + Kaylee
+    </p>
+  </div>
+
+  <div hidden id='info' class='spacer-4'>
+    <a href='/info' class='line-drawn'>Event Information</a>
+  </div>
+  <div hidden id='rsvp' class='spacer-4'>
+    <a href='/rsvp' class='line-drawn'>RSVP</a>
+  </div>
+</section>
+
+<script>
+  (async () => {
+    const data = await info();
+    if (!data || !data?.data) return;
+
+    const { name, short, guests, confirmed, phone, id } = data.data;
+    if (confirmed === undefined) return;
+
+    const el = document.querySelector('h1 span');
+    el.innerText = confirmed ? 'accepted' : 'declined';
+    el.hidden = false;
+
+    document.querySelector('h1.name').innerText = name;
+    if (short)
+      document.querySelector('p span.short').innerText = short + ', your';
+
+
+    toggleHidden(confirmed, '_accepted', '_declined');
+    toggleHidden(confirmed, 'info', 'rsvp');
+    if (!confirmed)
+      document.querySelector('#rsvp a').href = `/rsvp/${id}`;
+    else
+      document.querySelector('p span.large').innerText = guests;
+  })();
+</script>

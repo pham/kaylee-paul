@@ -1,0 +1,61 @@
+---
+layout: default
+---
+<section id='guests' class='page center-box-container visible'>
+  {% include logo.html %}
+  <h1>guests</h1>
+
+  <p id='stats' hidden>
+    accepted: <code id='_accepted'></code><br/>
+    declined: <code id='_declined'></code><br/>
+    remained: <code id='_remained'></code><br/>
+    total: <code id='_total'></code><br/>
+  </p>
+
+  <table>
+    <thead>
+      <td>&check;</td>
+      <th>Name</th><td>Phone</td><td>Guests</td>
+    </thead>
+    <tbody id='list'></tbody>
+  </table>
+</section>
+
+<script>
+  (async () => {
+    const info = await list();
+    if (!info) return;
+
+    const _el = (id) => document.getElementById(id);
+    const el = _el('list');
+
+    let accepted = 0;
+    let declined = 0;
+    let remained = 0;
+
+    for (const {name,confirmed,guests,id} of info) {
+      el.innerHTML += `
+        <tr>
+          <td>${confirmed ? '&check;' : confirmed === false ? '\u2715' : ''}</td>
+          <th><a href='/rsvp/${id}'>${name}</a></th>
+          <td><code>${id}</code></td>
+          <td>${guests || ''}</td>
+        </tr>
+      `;
+
+      if (confirmed === undefined) {
+        remained += guests || 1;
+      } else if (confirmed) {
+        accepted += guests;
+      } else {
+        declined += guests;
+      }
+    }
+
+    _el('_accepted').innerText = accepted;
+    _el('_declined').innerText = declined;
+    _el('_remained').innerText = remained;
+    _el('_total').innerText = remained + accepted;
+    _el('stats').hidden = false;
+  })();
+</script>
