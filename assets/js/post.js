@@ -203,7 +203,7 @@ async function decline(e) {
     }
     await makeRequest('POST', `/decline/${id}`, payload);
     restore(e);
-    location.href = `/status/${id}`;
+    location.href = `/status#${id}`;
   } catch (er) {
     restore(e);
     location.href = '/error';
