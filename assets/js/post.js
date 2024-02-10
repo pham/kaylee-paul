@@ -173,12 +173,12 @@ async function accept(e) {
       message: `Name: ${name} -- Phone: ${phone}`
     };
     if (message) {
-      payload.message += `-- ${message}`;
+      payload.message += ` -- ${message}`;
       payload.meta = { [`accepted-${now()}`]: message };
     }
     await makeRequest('POST', `/accept/${id}/${guests}`, payload);
     restore(e);
-    location.href = `/status/${id}`;
+    location.href = `/status#${id}`;
   } catch (er) {
     restore(e);
     location.href = '/error';
@@ -198,7 +198,7 @@ async function decline(e) {
       message: `Name: ${name} -- Phone: ${phone} -- Guests: ${guests}`
     };
     if (message) {
-      payload.message += `-- ${message}`;
+      payload.message += ` -- ${message}`;
       payload.meta = { [`declined-${now()}`]: message };
     }
     await makeRequest('POST', `/decline/${id}`, payload);
