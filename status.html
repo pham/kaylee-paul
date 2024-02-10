@@ -61,7 +61,7 @@ layout: default
     toggleHidden(confirmed, '_accepted', '_declined');
     toggleHidden(confirmed, 'info', 'rsvp');
     if (!confirmed)
-      document.querySelector('#rsvp a').href = `/rsvp/${id}`;
+      document.querySelector('#rsvp a').href = `/rsvp#${id}`;
     else
       document.querySelector('p span.large').innerText = guests;
   })();
