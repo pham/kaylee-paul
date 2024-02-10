@@ -37,7 +37,7 @@ layout: default
       el.innerHTML += `
         <tr>
           <td>${confirmed ? '&check;' : confirmed === false ? '\u2715' : ''}</td>
-          <th><a href='/rsvp/${id}'>${name}</a></th>
+          <th><a href='/rsvp#${id}'>${name}</a></th>
           <td><code>${id}</code></td>
           <td>${guests || ''}</td>
         </tr>
