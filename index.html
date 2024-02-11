@@ -3,7 +3,7 @@ layout: default
 ---
 
 <main class='center-box-container'>
-  <h1 class='super spacer-2'>Kaylee &times; Paul</h1>
+  <h1 class='super spacer-2'>Paul &times; Kaylee</h1>
   <small>February 29th</small>
 
   <blockquote class='spacer-4'>
@@ -12,5 +12,24 @@ layout: default
     <small>Songs of Solomon 8:7</small>
   </blockquote>
 
-  <a href='/rsvp' class='line-drawn'>RSVP</a>
+  <button
+    id='rsvp-button'
+    onclick='location.href="/rsvp"'
+    class='line-drawn hidden'
+  >RSVP</button>
+
+  <button
+    id='guestbook'
+    class='line-drawn hidden'
+    onclick='location.href="/guestbook"'
+  >Guestbook</button>
+
+  <a class='special spacer-1' href='/familytree'>families</a>
 </main>
+
+<script>
+  (async () => {
+    const enabled = await makeRequest('GET', '/config/registration');
+    document.querySelector(enabled?.data ? '#rsvp-button' : '#guestbook').classList.remove('hidden');
+  })();
+</script>

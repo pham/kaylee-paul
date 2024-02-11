@@ -41,6 +41,10 @@ main {
   position: relative;
 }
 
+.hidden {
+  display: none!important;
+}
+
 .page {
   position: absolute;
   top: 0;
@@ -158,6 +162,9 @@ h1 + p {
 
 .name {
   font-family: var(--font-name);
+}
+.special {
+  font-family: var(--font-special);
 }
 
 body::-webkit-scrollbar {
@@ -363,3 +370,4 @@ h1.super {
   margin-bottom: 2em;
   color: lightblue;
 }
+
