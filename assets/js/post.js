@@ -278,7 +278,15 @@ async function list() {
     });
   }
 
-  return arr.sort( (a,b) => a.type - b.type );
+  const sort = (a,b) => {
+    const at = a.type || 5;
+    const bt = b.type || 5;
+    return at < bt ? -1
+      : at > bt ? 1
+      : a.name.localeCompare(b.name);
+  };
+
+  return arr.sort(sort);
 }
 
 async function add(e) {
