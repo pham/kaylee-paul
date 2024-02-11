@@ -113,9 +113,6 @@ async function respond(e, action) {
   const el = document.getElementById(divId);
   const ins = el.querySelectorAll('input');
   const data = { };
-  const accepted = document.getElementById('accepted-content');
-  const declined = document.getElementById('declined-content');
-  const error = document.getElementById('error-content');
 
   e.disabled = true;
 
@@ -141,10 +138,7 @@ async function respond(e, action) {
   const info = await lookup(phone);
 
   if (!info || !info.success) {
-    page(el, 'error', 'error-content', `
-      Sorry, I cannot find you on the guest list.
-      Please contact Paul!
-    `);
+    alert('Sorry, I cannot find you on the guest list.  Please contact Paul!');
     restore(e);
     return;
   }
@@ -211,17 +205,20 @@ async function decline(e) {
 }
 
 async function populateRsvp() {
+  const conf = await makeRequest('GET', '/config/registration');
+  const enabled = !!conf?.data;
+
   const pug = location.hash.substr(1)
     || location.pathname.split('/')[2];
 
   if (!pug)
-    return populate('rsvp');
+    return enabled ? populate('rsvp') : page(document.querySelector('#rsvp'), 'rsvp-closed');
 
   const id = ID(pug);
   const info = await lookup(id);
 
   if (!info || !info.success)
-    return populate('rsvp');
+    return enabled ? populate('rsvp') : null;
 
   const {
     name,
@@ -244,6 +241,7 @@ async function populateRsvp() {
     el.innerHTML = note;
   }
 
+  document.querySelector('#date-time').hidden = false;
   if (confirmed !== undefined) {
     document.getElementById(confirmed ? '_accepted' : '_declined').hidden = false;
   }
@@ -281,4 +279,48 @@ async function list() {
   }
 
   return arr.sort( (a,b) => a.type - b.type );
+}
+
+async function add(e) {
+  const ins = document.querySelectorAll('#rsvp-add input');
+  const data = { };
+
+  e.disabled = true;
+
+  ins.forEach( i => {
+    i.classList.remove('error');
+
+    if (!i.value) {
+      i.classList.add('error');
+      return;
+    }
+
+    data[i.name] = i.value;
+    i.disabled = true;
+  } );
+
+  const {name,phone,guests} = data;
+
+  if (!name || !phone || !guests)
+    return populate('rsvp-add');
+
+  const info = await lookup(phone);
+
+  if (info?.success) {
+    alert(`${phone} already exists`);
+    return populate('rsvp-add');
+  }
+
+  const id = ID(phone);
+  const ret = await makeRequest('POST', `/insert/${id}`, {
+    guests,
+    phone,
+    name,
+    manual: true,
+  });
+
+  if (ret?.success)
+    location.href = `/rsvp#${id}`;
+
+  return populate('rsvp-add');
 }

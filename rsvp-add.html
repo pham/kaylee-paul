@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<section id='rsvp-add' class='page center-box-container visible'>
+  {% include logo.html %}
+
+  <h1>rsvp add</h1>
+  <div class='input-group spacer-1'>
+    <input required
+      name='name'
+      type='text'
+      class='line-drawn'
+    />
+    <span class='floating-label'>Full name</span>
+  </div>
+
+  <div class='input-group spacer-2'>
+    <input required
+      name='phone'
+      type='tel'
+      class='line-drawn'
+    />
+    <span class='floating-label'>Mobile phone</span>
+  </div>
+
+  <div class='input-group spacer-2'>
+    <input required
+      name='guests'
+      type='number'
+      pattern='[0-9]*'
+      class='line-drawn'
+    />
+    <span class='floating-label'>Number of guests</span>
+  </div>
+
+  <div class='spacer-4'>
+    <button insert
+      class='line-drawn'
+      data-id='rsvp-add'
+      onclick='add(this)'
+    >Add</button>
+  </div>
+</section>
+
+<script>
+  (async () => {
+    //const text = await makeRequest('GET', '/config/texts');
+  })();
+</script>

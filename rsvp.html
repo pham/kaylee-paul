@@ -7,8 +7,8 @@ layout: default
 
   <h1>rsvp</h1>
   <p>
-    Please let us know if you're attending.
-    Our wedding will be on February 29th at 10 am.
+    <span id='rsvp-tag'>Please let us know if you're attending.</span>
+    <span id='date-time' hidden>Our wedding will be on February 29th at 10 a.m.</span>
   </p>
 
   <p hidden id='note'></p>
@@ -76,6 +76,28 @@ layout: default
   </div>
 </section>
 
+<section id='rsvp-closed' class='page center-box-container'>
+  {% include logo.html %}
+
+  <h1>rsvp closed</h1>
+  <p>
+    RSVP has been closed.
+    Please contact Paul.
+  </p>
+  <div class='spacer-4'>
+    <a
+      class='line-drawn'
+      href='/info'
+    >Information</a>
+  </div>
+</section>
+
 <script>
   populateRsvp();
+  (async () => {
+    const text = await makeRequest('GET', '/config/texts');
+    if (text?.data?.['rsvp-tag']) {
+      document.querySelector('#rsvp-tag').innerHTML = text.data['rsvp-tag'];
+    }
+  })();
 </script>
