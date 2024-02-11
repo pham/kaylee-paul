@@ -313,7 +313,7 @@ async function add(e) {
 
   const id = ID(phone);
   const ret = await makeRequest('POST', `/insert/${id}`, {
-    guests,
+    guests: parseInt(guests),
     phone,
     name,
     manual: true,
