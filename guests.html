@@ -43,10 +43,10 @@ layout: default
         </tr>
       `;
 
-      const count = parseInt(guests || 1);
+      const count = parseInt(guests || 0);
 
       if (confirmed === undefined) {
-        remained += count || 1;
+        remained += count || 0;
       } else if (confirmed) {
         accepted += count;
       } else {
