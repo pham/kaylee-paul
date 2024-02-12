@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    {% include head.html %}
+    <link href="{{ 'assets/css/style.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ 'assets/css/familytree.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ 'assets/css/tree-vertical.css' | relative_url }}" rel="stylesheet">
+  </head>
+  <body>
+    <section class='page center-box-container visible'>
+      {% include logo.html %}
+      {{ content }}
+    </section>
+  </body>
+</html>

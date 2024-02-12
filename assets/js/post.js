@@ -2,36 +2,6 @@ const ENDPOINT = 'https://rsvp-sf5ynstwha-uc.a.run.app';
 
 const ID = (n) => n.replace(/[^0-9]/g, '');
 
-function post(path, params, callback) {
-  const http = new XMLHttpRequest();
-  const url = `${ENDPOINT}/${path}`;
-
-  http.open('POST', url, true);
-  http.setRequestHeader('Content-type', 'application/json');
-
-  http.onreadystatechange = function() {
-    if (http.readyState == 4 && http.status == 200) {
-      callback(JSON.parse(http.responseText));
-    }
-  }
-  http.send(JSON.stringify(params));
-}
-
-function get(path, callback) {
-  const http = new XMLHttpRequest();
-  const url = `${ENDPOINT}${path}`;
-
-  http.open('GET', url);
-  http.setRequestHeader('Content-type', 'application/json');
-
-  http.onreadystatechange = function() {
-    if (http.readyState == 4 && http.status == 200) {
-      callback(JSON.parse(http.responseText));
-    }
-  }
-  http.send();
-}
-
 function makeRequest(method, path, payload) {
   return new Promise(function (resolve, reject) {
     const xhr = new XMLHttpRequest();
@@ -67,23 +37,6 @@ async function lookup(n) {
     info = null;
   }
   return info;
-}
-
-function findNumber(n) {
-  const content = document.getElementById('content');
-
-  content.innerText = 'Looking up...';
-
-  get(`/id/${ID(n)}`, (info) => {
-    console.log(info)
-
-    const { name, guests } = info.data;
-
-    content.innerHTML = `
-      <h1 class='name'>${name}</h1>
-      ${guests ? 'Party of ${guests}' : 'Unconfirmed'}
-    `;
-  });
 }
 
 const restore = (e) => {
