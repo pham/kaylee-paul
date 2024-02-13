@@ -2,6 +2,7 @@ function error() {
   query('#_notfound').hidden = false;
   query('#rsvp').hidden = false;
 }
+
 (async () => {
   const data = await info();
   if (!data?.data) return error();
@@ -19,6 +20,7 @@ function error() {
 
   toggleHidden(confirmed, '_accepted', '_declined');
   toggleHidden(confirmed, 'info', 'rsvp');
+
   if (!confirmed)
     query('#rsvp a').href = `/rsvp#${id}`;
   else

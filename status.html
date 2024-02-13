@@ -5,32 +5,27 @@ layout: default
   {% include logo.html %}
   <h1>rsvp <span hidden></span></h1>
 
-  <div hidden class='center-align' id='_accepted'>
+  <div class='center-align'>
     <h1 class='name'></h1>
-    <p>
-      Thank you! You are confirmed for party of:
-      <span class='large'></span>
-    </p>
-    <p>
-      <span class='short'>Your</span> presence will be a blessing to us!
-      We can't wait to share our special moment with you!
-    </p>
+    <div hidden id='_accepted'>
+      <p>
+        Thank you! You are confirmed for party of:
+        <span class='large'></span>
+      </p>
+      <p>
+        <span class='short'>Your</span> presence will be a blessing to us!
+        We can't wait to share our special moment with you!
+      </p>
+    </div>
+    <div hidden id='_declined'>
+      <p>
+        <span class='short'>Your</span> presence will be missed at our wedding!
+        Please keep in touch.
+      </p>
+    </div>
     <p>
       Love,<br/>
       Paul &times; Kaylee
-    </p>
-  </div>
-
-  <div hidden class='center-align' id='_declined'>
-    <h1 class='name'></h1>
-    <p>
-      <span class='short'>Your</span> presence will be missed at our wedding!
-      Please keep in touch.
-    </p>
-
-    <p>
-      Love,<br/>
-      Paul + Kaylee
     </p>
   </div>
 
@@ -46,6 +41,7 @@ layout: default
   </div>
   <div hidden id='rsvp' class='spacer-4'>
     <a href='/rsvp' class='line-drawn'>RSVP</a>
+    <a href='/' class='line-drawn'>Home</a>
   </div>
 </section>
 
