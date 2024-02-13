@@ -1,0 +1,15 @@
+hero: "Paul &times; Kaylee"
+date: "February 29th"
+time: "10 a.m."
+quote:
+  text: |
+    Many waters cannot quench love,<br/>
+    neither can the floods drown it.
+  ref: "Songs of Solomon 8:7"
+venue:
+  name: Milpitas Christian Church
+  address: |
+    1715 E. Calaveras Blvd.,<br/>
+    Milpitas, CA 95035
+  href: https://maps.app.goo.gl/AtSUskFLbN7xFKXK9
+  logo: https://milpitas.cc/assets/logo.svg

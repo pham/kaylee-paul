@@ -1,2 +1,72 @@
-title: Kaylorful
-future: true
+title: "Paul &times; Kaylee"
+description: >
+  Paul &times; Kaylee &bull; February 29th.
+  Many waters cannot quench love,
+  neither can the floods drown it.
+  Songs of Solomon 8:7
+
+info:
+  date_format: "%b %d, %y"
+  short_name: "Paul+Kaylee"
+  color:
+    theme: "#ffc100"
+    bg: "#06113C"
+  url: "https://kp.kaylorful.com"
+  categories:
+    - social
+    - photo
+    - travel
+    - news
+  logo:
+    image: "logo.svg"
+    size: 200
+    alt_image: "logo-circle.svg"
+    alt_size: 70
+    sizes: [ 48, 96, 144, 192, 300, 512 ]
+  meta:
+    apple_icon: "logo-300.png"
+    og_image: "logo-512.png"
+    favicon: "favicon.ico"
+    keywords: >
+      wedding,
+      church,
+      vietnam,
+      california,
+      saigon
+  font_families:
+    - Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200
+    - Cormorant+Garamond+Display
+    - Be+Vietnam+Pro
+    - Passions+Conflict
+    - Montez
+    - Share+Tech+Mono
+
+sass:
+  style: compact
+
+collections_dir: content
+collections:
+  modules:
+    output: true
+
+defaults:
+  - scope:
+      path: "*.html"
+    values:
+      layout: "default"
+  - scope:
+      type: "modules"
+    values:
+      layout: "modules"
+
+include:
+  - index.html
+  - 404.html
+  - pwabuilder-sw.js
+  - content
+
+exclude:
+  - README.md
+  - LICENSE
+  - runme.sh
+

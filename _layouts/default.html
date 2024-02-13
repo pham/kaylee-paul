@@ -1,10 +1,15 @@
 <!doctype html>
-<html>
-  <head>
-    {% include head.html %}
-    <link href="{{ 'assets/css/style.css' |  relative_url }}" rel="stylesheet">
-  </head>
+<html lang="en">
+  {% include header.html %}
   <body>
-    {{ content }}
+    {% if page.url == '/404.html' -%}
+      <h2 class="center-align">Uh Oh!</h2>
+    {% elsif page.url == '/offline.html' -%}
+      <h2 class="center-align">No Internet Connection</h2>
+    {% else -%}
+      {{ content }}
+    {% endif -%}
+    {% include foot/pwaupdate.html %}
   </body>
 </html>
+

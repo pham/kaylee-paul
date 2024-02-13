@@ -1,0 +1,26 @@
+
+{% assign href = include.href | default: "#" %}
+{% assign label = include.label %}
+{% if include.type == 'A' -%}
+  <a
+    title='{{ label }}'
+    id='{{ include.id }}'
+    data-id='{{ include.dataId }}'
+    href='{{ href }}'
+    class='line-drawn {{ include.class }}'
+  >{{ label }}</a>
+{% else -%}
+  {% if include.onclick -%}
+    {% assign onclick = include.onclick -%}
+  {% else -%}
+    {% assign onclick = href | prepend: 'location.href="' | append: '"' -%}
+  {% endif -%}
+  <button
+    title='{{ label }}'
+    id='{{ include.id }}'
+    data-id='{{ include.dataId }}'
+    onclick='{{ onclick }}'
+    class='line-drawn {{ include.class }}'
+  >{{ label }}</button>
+{% endif -%}
+

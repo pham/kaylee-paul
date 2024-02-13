@@ -1,28 +1,29 @@
 ---
 layout: default
 ---
+{% assign MAIN = site.data.main %}
 <section id='info' class='page center-box-container visible'>
+  {% include logo.html %}
   <h1>event info</h1>
 
   <p class='spacer-1'>
     Please come celebrate with us on<br/>
-    <span class='large'>February 29th, 2024</span>
+    <span class='large'>{{ MAIN.date }}</span>
   </p>
   <p>
     Ceremony starts at<br/>
-    <span class='large'>10 a.m.</span>
+    <span class='large'>{{ MAIN.time }}</span>
   </p>
+
+  {% if MAIN.venue.logo -%}
+  <img src='{{ MAIN.venue.logo }}' width=70 title='{{ MAIN.venue.name }}' alt='{{ MAIN.venu.name }}' />
+  {% endif -%}
+
   <p>
-    Milpitas Christian Church<br/>
-    <a target='_blank' href='https://maps.app.goo.gl/AtSUskFLbN7xFKXK9'>
-      1715 E. Calaveras Blvd.,<br/>
-      Milpitas, CA 95035
+    <strong>{{ MAIN.venue.name }}</strong><br/>
+    <a target='_blank' href='{{ MAIN.venue.href }}'>
+      {{ MAIN.venue.address }}
     </a>
   </p>
-
-  <div class='spacer-4'>
-    {% include logo.html %}
-  </div>
 </section>
-
 

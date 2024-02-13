@@ -1,0 +1,15 @@
+
+<div class='input-group {{ include.class }}'>
+  <input required
+    disabled='{{ include.disabled | default: "true" }}'
+    name='{{ include.name }}'
+    type='{{ include.type | default: "text" }}'
+    pattern='{{ include.pattern | default: ".*" }}'
+    class='line-drawn'
+  />
+  <span class='floating-label'>{{ include.label }}</span>
+  {% if include.bottom -%}
+    <span class='floating-label-bottom'>{{ include.bottom }}</span>
+  {%- endif %}
+</div>
+

@@ -1,5 +1,6 @@
 ---
-layout: tree
+layout: default
+tree: horizontal
 ---
 
 <section class='page center-box-container visible' style='min-width: 1050px'>
@@ -7,98 +8,29 @@ layout: tree
 
   <h1>Bride's Family</h1>
   <div class='tree'>
+    {% assign parents = site.data.family.bride.parents %}
     <ul>
-      <li>
-        <a href='javascript:;' class='parents'>Bố Thắng &times; Mẹ Xuân</a>
-        <ul>
-          <li>
-            <a href='javascript:;'>Hường &times; Nam</a>
-            <ul>
-              <li><a href='javascript:;' title='Đỗ Hoàng Gia-Vinh'>Gia-Vinh (Donal)</a></li>
-              <li><a href='javascript:;' title='Đỗ Hoàng Gia-Hân'>Gia-Hân (Donie)</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href='javascript:;'>Mai-Anh &times; Nam</a>
-            <ul>
-              <li><a href='javascript:;' title='Nguễn Hoàng Ngọc-Anh'>Ngọc-Anh (Mia)</a></li>
-              <li><a href='javascript:;' title='Nguễn Hoàng Nam-Anh'>Nam-Anh (Max)</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href='javascript:;' class='emp'>KAYLEE ❤️ PAUL</a>
-            <ul hidden>
-              <li><a href='javascript:;'>🐇 🐇</a></li>
-              <li><a href='javascript:;'>🐇</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
+      {% include tree/hblock.html name=parents.name children=parents.children %}
     </ul>
   </div>
 
   <div style='margin-top: 6em'></div>
   <h1>Groom's Family</h1>
   <div class='tree'>
+    {% assign parents = site.data.family.groom.parents %}
     <ul>
-      <li>
-        <a href='javascript:;' class='parents'>Pastor Long &times; Mai</a>
-        <ul>
-          <li>
-            <a href='javascript:;'>Chi &times; Chính</a>
-            <ul>
-              <li><a href='javascript:;'>Naomi</a></li>
-              <li><a href='javascript:;'>Debbie</a></li>
-              <li><a href='javascript:;'>Daniel</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href='javascript:;'>Châu &times; Hưng</a>
-            <ul>
-              <li><a href='javascript:;'>Nathan</a></li>
-              <li><a href='javascript:;'>Seraphine</a></li>
-              <li><a href='javascript:;'>Jadon</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href='javascript:;' class='emp'>PAUL ❤️ KAYLEE</a>
-            <ul hidden>
-              <li><a href='javascript:;'>🐇</a></li>
-              <li><a href='javascript:;'>🐇</a></li>
-              <li><a href='javascript:;'>🐇</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href='javascript:;'>Minh &times; Ngân</a>
-            <ul>
-              <li><a href='javascript:;'>Nora</a></li>
-              <li><a href='javascript:;'>Ayden</a></li>
-            </ul>
-          </li>
-          <li><a href='javascript:;'>Christine &times; Alvin</a></li>
-        </ul>
-      </li>
+      {% include tree/hblock.html name=parents.name children=parents.children %}
     </ul>
   </div>
 
   <div style='margin-top: 6em'></div>
   <h1>Paul's God Family</h1>
   <div class='tree'>
+    {% assign parents = site.data.family.paul.parents %}
     <ul>
-      <li>
-        <a href='javascript:;' class='parents'>Pastor Paul</a>
-        <ul>
-          <li>
-            <a href='javascript:;'>Lập &times; Nhi</a>
-            <ul>
-              <li><a href='javascript:;' title='Lê Thiên Khôi'>Khôi (Happi)</a></li>
-              <li><a href='javascript:;' title='Lê Ngọc An Khuê'>Khuê (Hani)</a></li>
-              <li><a href='javascript:;' title='Lê Huy Khiêm'>Khiêm (Haha)</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
+      {% include tree/hblock.html name=parents.name children=parents.children %}
     </ul>
   </div>
 
+  {% include button.html href='/tree/vertical' class='spacer-4' label='Vertical Graph' %}
 </section>

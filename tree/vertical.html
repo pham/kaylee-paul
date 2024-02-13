@@ -1,120 +1,37 @@
 ---
-layout: tree
+layout: default
+tree: vertical
 ---
 
 <section class='page center-box-container visible'>
   {% include logo.html %}
+
   <h1>Bride's Family</h1>
   <div class='tree-vertical'>
+    {% assign parents = site.data.family.bride.parents %}
     <ul>
-      <li>
-        <details open>
-          <summary>Bố Thắng &times; Mẹ Xuân</summary>
-          <ul>
-            <li>
-              <details open>
-                <summary>Hường &times; Nam</summary>
-                <ul>
-                  <li title='Đỗ Hoàng Gia-Vinh'>Gia-Vinh (Donal)</li>
-                  <li title='Đỗ Hoàng Gia-Hân'>Gia-Hân (Donie)</li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details open>
-                <summary>Mai-Anh &times; Nam</summary>
-                <ul>
-                  <li title='Nguễn Hoàng Ngọc-Anh'>Ngọc-Anh (Mia)</li>
-                  <li title='Nguễn Hoàng Nam-Anh'>Nam-Anh (Max)</li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details open>
-                <summary>KAYLEE ❤️ PAUL</summary>
-               </details>
-            </li>
-          </ul>
-        </details>
-      </li>
+      {% include tree/vblock.html name=parents.name children=parents.children %}
     </ul>
   </div>
 
   <div style='margin-top: 6em'></div>
   <h1>Groom's Family</h1>
   <div class='tree-vertical'>
+    {% assign parents = site.data.family.groom.parents %}
     <ul>
-      <li>
-        <details open>
-          <summary>Pastor Long &times; Mai</summary>
-          <ul>
-            <li>
-              <details open>
-                <summary>Chi &times; Chính</summary>
-                <ul>
-                  <li>Naomi</li>
-                  <li>Debbie</li>
-                  <li>Daniel</li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details open>
-                <summary>Châu &times; Hưng</summary>
-                <ul>
-                  <li>Nathan</li>
-                  <li>Seraphine</li>
-                  <li>Jadon</li>
-               </ul>
-              </details>
-            </li>
-            <li>
-              <details open>
-                <summary>PAUL ❤️ KAYLEE</summary>
-              </details>
-            </li>
-            <li>
-              <details open>
-                <summary>Minh &times; Ngân</summary>
-                <ul>
-                  <li>Nora</li>
-                  <li>Ayden</li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details open>
-                <summary>Christine &times; Alvin</summary>
-              </details>
-            </li>
-          </ul>
-        </details>
-      </li>
+      {% include tree/vblock.html name=parents.name children=parents.children %}
     </ul>
   </div>
 
   <div style='margin-top: 6em'></div>
   <h1>Paul's God Family</h1>
   <div class='tree-vertical'>
+    {% assign parents = site.data.family.paul.parents %}
     <ul>
-      <li>
-        <details open>
-          <summary>Pastor Paul</summary>
-          <ul>
-            <li>
-              <details open>
-                <summary>Lập &times; Nhi</summary>
-                <ul>
-                  <li title='Lê Thiên Khôi'>Khôi (Happi)</li>
-                  <li title='Lê Ngọc An Khuê'>Khuê (Hani)</li>
-                  <li title='Lê Huy Khiêm'>Khiêm (Haha)</li>
-                </ul>
-              </details>
-            </li>
-          </ul>
-        </details>
-      </li>
+      {% include tree/vblock.html name=parents.name children=parents.children %}
     </ul>
   </div>
+
+  {% include button.html href='/tree/horizontal' class='spacer-4' label='Wide Graph' %}
 </section>
 

@@ -1,35 +1,28 @@
 ---
 layout: default
+rsvp: rsvp-button
+guestbook: guestbook
 ---
 
+{% assign MAIN = site.data.main %}
 <main class='center-box-container'>
-  <h1 class='super spacer-2'>Paul &times; Kaylee</h1>
-  <small>February 29th</small>
+  <h1 class='super spacer-2'>{{ MAIN.hero }}</h1>
+  <small>{{ MAIN.date }}</small>
 
   <blockquote class='spacer-4'>
-    Many waters cannot quench love,<br/>
-    neither can the floods drown it.<br/>
-    <small>Songs of Solomon 8:7</small>
+    {{ MAIN.quote.text }}
+    <small>{{ MAIN.quote.ref }}</small>
   </blockquote>
 
-  <button
-    id='rsvp-button'
-    onclick='location.href="/rsvp"'
-    class='line-drawn hidden'
-  >RSVP</button>
+  {% include button.html label='RSVP' id=page.rsvp href='/rsvp' class='hidden' %}
+  {% include button.html label='Guestbook' id=page.guestbook href='/guestbook' class='hidden' %}
 
-  <button
-    id='guestbook'
-    class='line-drawn hidden'
-    onclick='location.href="/guestbook"'
-  >Guestbook</button>
-
-  <a class='special spacer-1' href='/tree/vertical'>families</a>
+  <a class='special spacer-1' href='/tree'>families</a>
 </main>
 
-<script>
+<script defer>
   (async () => {
-    const enabled = await makeRequest('GET', '/config/registration');
-    document.querySelector(enabled?.data ? '#rsvp-button' : '#guestbook').classList.remove('hidden');
+    const enabled = await config('registration');
+    document.querySelector(enabled ? '#{{ page.rsvp }}' : '#{{ page.guestbook }}').classList.remove('hidden');
   })();
 </script>

@@ -1,0 +1,53 @@
+---
+---
+{%- assign info = site.info -%}
+{
+  "background_color": "{{ info.color.bg }}",
+  "theme_color": "{{ info.color.theme }}",
+  "name": "{{ site.title }}",
+  "short_name": "{{ info.short_name }}",
+  "categories": [ "{{ info.categories | join: '","' }}" ],
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "description": "{{ site.description | strip_newlines }}",
+  "orientation": "portrait-primary",
+  "lang": "en",
+  "dir": "auto",
+  {%- if info.shortcuts %}
+  "shortcuts": [
+    {%- for sc in info.shortcuts %}
+    {
+      "name": "{{ sc.name }}",
+      "url": "{{ sc.url }}",
+      "description": "{{ sc.desc }}"
+    }{%- if forloop.index != forloop.length %},{%- endif %}
+    {%- endfor %}
+  ],
+  {%- endif %}
+  "icons": [
+    {%- for px in info.logo.sizes %}
+    {
+      "src": "logo-{{px}}.png",
+      "sizes": "{{px}}x{{px}}",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {%- endfor %}
+    {
+      "src": "logo-300.png",
+      "type": "image/png",
+      "sizes": "300x300"
+    },
+    {
+      "src": "logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    }
+  ],
+  "display_override": [
+    "standalone",
+    "fullscreen"
+  ]
+}

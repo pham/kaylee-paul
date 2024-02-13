@@ -14,50 +14,11 @@ layout: default
 
   <table>
     <thead>
-      <td>&check;</td>
+      <td><span class='material-symbols-outlined'>check</span></td>
       <th>Name</th><td>Phone</td><td>Guests</td>
     </thead>
     <tbody id='list'></tbody>
   </table>
 </section>
 
-<script>
-  (async () => {
-    const info = await list();
-    if (!info) return;
-
-    const _el = (id) => document.getElementById(id);
-    const el = _el('list');
-
-    let accepted = 0;
-    let declined = 0;
-    let remained = 0;
-
-    for (const {name,confirmed,guests,id} of info) {
-      el.innerHTML += `
-        <tr>
-          <td>${confirmed ? '&check;' : confirmed === false ? '\u2715' : ''}</td>
-          <th><a href='/rsvp#${id}'>${name}</a></th>
-          <td><code>${id}</code></td>
-          <td>${guests || ''}</td>
-        </tr>
-      `;
-
-      const count = parseInt(guests || 0);
-
-      if (confirmed === undefined) {
-        remained += count || 0;
-      } else if (confirmed) {
-        accepted += count;
-      } else {
-        declined += count;
-      }
-    }
-
-    _el('_accepted').innerText = accepted;
-    _el('_declined').innerText = declined;
-    _el('_remained').innerText = remained;
-    _el('_total').innerText = remained + accepted;
-    _el('stats').hidden = false;
-  })();
-</script>
+<script src='/assets/js/guests.js'></script>

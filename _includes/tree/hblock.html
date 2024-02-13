@@ -1,0 +1,11 @@
+
+<li>
+  <a href='javascript:;'>{{ include.name }}</a>
+  {% if include.children -%}
+    <ul>
+    {% for child in include.children -%}
+      {% include tree/hblock.html name=child.name children=child.children %}
+    {% endfor -%}
+    </ul>
+  {% endif -%}
+</li>

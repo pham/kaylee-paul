@@ -1,0 +1,81 @@
+bride:
+  parents:
+    name: Bố Thắng &times; Mẹ Xuân
+    father: Hoàng Tiến Thắng
+    mother: Nguyễn Thị Xuân
+    children:
+      - name: Hường &times; Nam
+        mother: Hoàng Thu Hường
+        father: Đỗ Hoàng Nam
+        children:
+          - name: Gia-Vinh (Donal)
+            fullname: Đỗ Hoàng Gia-Vinh
+          - name: Gia-Hân (Donie)
+            fullname: Đỗ Hoàng Gia-Hân
+      - name: Mai-Anh &times; Nam
+        mother: Hoàng Mai Anh
+        father: Nguyễn Hoàng Nam
+        children:
+          - name: Ngọc-Anh (Mia)
+            fullname: Nguyễn Hoàng Ngọc-Anh
+          - name: Nam-Anh (Max)
+            fullname: Nguyễn Hoàng Nam-Anh
+      - name: TÚ-LINH ❤️ KHÔI-NGUYÊN
+        mother: Hoàng Tú-Linh
+        father: Phạm Đức Khôi-Nguyên
+
+groom:
+  parents:
+    name: Pastor Long &times; Mai
+    father: Phạm Đức Long
+    mother: Lê Thị Ngọc Mai
+    children:
+      - name: Chi &times; Chính
+        mother: Phạm Ngọc Triều Thiên
+        father: Lê Ngọc Chính
+        children:
+          - name: Naomi
+            fullname: Lê Thiên Kim
+          - name: Deborah
+            fullname: Lê Thiên Thanh
+          - name: Daniel
+            fullname: Lê Chính Danh
+      - name: Châu &times; Hưng
+        mother: Phạm Ngọc Diễn Châu
+        father: Phạm Ngọc Hưng
+        children:
+          - name: Nathan
+            fullname: Phạm Vinh Quang
+          - name: Seraphine
+            fullname: Phạm Thiên Thi
+          - name: Jadon
+            fullname: Phạm Vương Quyền
+      - name: PAUL ❤️ KAYLEE
+        mother: Hoàng Tú-Linh
+        father: Phạm Đức Khôi-Nguyên
+      - name: Minh &times; Ngân
+        mother: Phạm Đức Nam Minh
+        father: Lê Thị Kim Ngân
+        children:
+          - name: Nora
+            fullname: Nora Phạm
+          - name: Ayden
+            fullname: Ayden Phạm
+      - name: Christine &times; Alvin
+        mother: Phạm Ngọc Hân
+        father: Alvin Tsai
+
+paul:
+  parents:
+    name: Pastor Paul
+    children:
+      - name: Lập &times; Nhi
+        mother: Nguyễn Ngọc Nhi
+        father: Lê Văn Lập
+        children:
+          - name: Khôi (Happi)
+            fullname: Lê Thiên Khôi
+          - name: Khuê (Hani)
+            fullname: Lê Ngọc An Khuê
+          - name: Khiêm (Haha)
+            fullname: Lê Huy Khiêm

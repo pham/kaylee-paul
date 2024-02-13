@@ -1,0 +1,14 @@
+
+<head>
+  {% include head/meta.html -%}
+  {% include head/common.html %}
+  <link rel="stylesheet" href="{{ 'assets/css/default.css' | relative_url }}" />
+  {% if page.tree == 'horizontal' -%}
+  <link rel="stylesheet" href="{{ 'assets/css/tree-horizontal.css' | relative_url }}" />
+  {% elsif page.tree == 'vertical' -%}
+  <link rel="stylesheet" href="{{ 'assets/css/tree-vertical.css' | relative_url }}" />
+  {% endif -%}
+
+  {% include head/js.html -%}
+
+</head>

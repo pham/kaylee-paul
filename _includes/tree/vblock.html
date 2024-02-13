@@ -1,0 +1,15 @@
+
+<li>
+  {% if include.children -%}
+  <details open>
+    <summary>{{ include.name }}</summary>
+    <ul>
+    {% for child in include.children -%}
+      {% include tree/vblock.html name=child.name children=child.children %}
+    {% endfor -%}
+    </ul>
+  </details>
+  {% else -%}
+    {{ include.name }}
+  {% endif -%}
+</li>

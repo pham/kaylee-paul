@@ -166,6 +166,9 @@ h1 + p {
 .special {
   font-family: var(--font-special);
 }
+.mono {
+  font-family: var(--font-mono); monospace;
+}
 
 body::-webkit-scrollbar {
   width: 6px;
@@ -178,18 +181,6 @@ body::-webkit-scrollbar-thumb {
 }
 body::-webkit-scrollbar-corner {
   background-color: transparent;
-}
-
-.mono {
-  font-family: var(--font-mono); monospace;
-}
-
-.gold-text {
-  color: #ecbb38;
-  -webkit-text-fill-color: transparent;
-  background: linear-gradient(transparent, transparent), url(/assets/gold/foil1.jpg) repeat;
-  background-clip: text;
-  font-family: var(--font-sans);
 }
 
 .video-background {
@@ -214,11 +205,19 @@ table, th, td {
   font-size: 15px;
 }
 
+.center-align {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+  text-decoration: none;
+}
+
 .middle-align {
   display: flex;
   align-items: center;
   text-transform: uppercase;
-  text-decoration: none;;
+  text-decoration: none;
 }
 
 .middle-align img {
@@ -371,3 +370,6 @@ h1.super {
   color: lightblue;
 }
 
+.material-symbols-outlined {
+  vertical-align: middle;
+}
