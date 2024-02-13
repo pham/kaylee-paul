@@ -1,3 +1,32 @@
+async function list() {
+  const pug = location.hash.substr(1)
+    || location.pathname.split('/')[2];
+
+  const info = await get('/list');
+
+  if (!info?.data) return;
+
+  const {data} = info;
+  const arr = [];
+
+  for (const id in data) {
+    const { name,confirmed,guests,type,invited,doubtful } = data[id];
+    arr.push({
+      name, id, guests, confirmed, type, invited, doubtful
+    });
+  }
+
+  const sort = (a,b) => {
+    const at = a.type || 5;
+    const bt = b.type || 5;
+    return at < bt ? -1
+      : at > bt ? 1
+      : a.name.localeCompare(b.name);
+  };
+
+  return arr.sort(sort);
+}
+
 (async () => {
   const info = await list();
   if (!info) return;
