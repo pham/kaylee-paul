@@ -1,7 +1,9 @@
 
 <div class='input-group {{ include.class }}'>
   <input required
-    disabled='{{ include.disabled | default: "true" }}'
+    {% unless include.enabled -%}
+    disabled
+    {% endunless -%}
     name='{{ include.name }}'
     type='{{ include.type | default: "text" }}'
     pattern='{{ include.pattern | default: ".*" }}'
