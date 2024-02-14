@@ -396,7 +396,7 @@ h1.super {
   border: solid 3px var(--color-accent);
 }
 
-.border::after {
+.border::before {
   content: '';
   position: absolute;
   background: transparent;
@@ -409,6 +409,7 @@ h1.super {
   border-top-right-radius: 255px 18px;
   border-top-left-radius: 10px 155px;
   border: solid 3px var(--color-accent-fade);
+  z-index: -1;
 }
 
 @media screen and (max-width: 500px) {
@@ -417,10 +418,13 @@ h1.super {
     min-width: 95vw;
     min-height: 95vh;
   }
+  br.soft {
+    display: none;
+  }
 }
 
 @media screen and (max-height: 660px),(max-width: 389px) {
-  .border, .border::after {
+  .border, .border::before {
     border: none!important;
   }
 }

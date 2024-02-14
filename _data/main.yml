@@ -3,7 +3,7 @@ date: "February 29th"
 time: "10 a.m."
 quote:
   text: |
-    Many waters cannot quench love,<br/>
+    Many waters cannot quench love,<br class='soft'/>
     neither can the floods drown it.
   ref: "Songs of Solomon 8:7"
 venue:
