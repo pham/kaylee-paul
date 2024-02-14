@@ -66,7 +66,7 @@ async function accept(e) {
       payload.message += ` -- ${message}`;
       payload.meta = { [`accepted-${now()}`]: message };
     }
-    await makeRequest('POST', `/accept/${id}/${guests}`, payload);
+    await post(`/accept/${id}/${guests}`, payload);
     restore(e);
     location.href = `/status#${id}`;
   } catch (er) {
@@ -91,7 +91,7 @@ async function decline(e) {
       payload.message += ` -- ${message}`;
       payload.meta = { [`declined-${now()}`]: message };
     }
-    await makeRequest('POST', `/decline/${id}`, payload);
+    await post(`/decline/${id}`, payload);
     restore(e);
     location.href = `/status#${id}`;
   } catch (er) {

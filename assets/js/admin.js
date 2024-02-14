@@ -29,7 +29,7 @@ async function add(e) {
   }
 
   const id = ID(phone);
-  const ret = await post(`/insert/${id}`, {
+  const ret = await apost(`/insert/${id}`, 'lovelove', {
     guests: parseInt(guests),
     phone,
     name,

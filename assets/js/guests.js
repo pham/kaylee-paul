@@ -1,8 +1,8 @@
-async function list() {
+async function list(bearer) {
   const pug = location.hash.substr(1)
     || location.pathname.split('/')[2];
 
-  const info = await get('/list');
+  const info = await aget('/list', bearer);
 
   if (!info?.data) return;
 
@@ -27,8 +27,8 @@ async function list() {
   return arr.sort(sort);
 }
 
-(async () => {
-  const info = await list();
+async function init(bearer) {
+  const info = await list(bearer);
   if (!info) return;
 
   const _el = (id) => document.getElementById(id);
@@ -67,5 +67,9 @@ async function list() {
   _el('_remained').innerText = remained;
   _el('_total').innerText = remained + accepted;
   _el('stats').hidden = false;
+}
+
+(async () => {
+  await init('lovelove');
 })();
 
