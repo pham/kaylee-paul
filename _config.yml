@@ -20,11 +20,11 @@ info:
   logo:
     image: "logo.svg"
     size: 200
-    alt_image: "logo-circle.svg"
+    alt_image: "logo-square.svg"
     alt_size: 70
     sizes: [ 48, 96, 144, 192, 300, 512 ]
   meta:
-    apple_icon: "logo-300.png"
+    apple_icon: "logo-square-300.png"
     og_image: "logo-512.png"
     favicon: "favicon.ico"
     keywords: >

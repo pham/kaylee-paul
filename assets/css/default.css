@@ -258,7 +258,7 @@ blockquote small {
   color: var(--color-fade);
 }
 
-.center-box-container {
+main, .center-box-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -372,4 +372,49 @@ h1.super {
 
 .material-symbols-outlined {
   vertical-align: middle;
+}
+
+.border {
+  background:transparent;
+  max-height: 95vh;
+  max-width: 95vw;
+  padding: 2rem;
+
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius: 15px 255px;
+}
+
+.border-2 {
+  background: transparent;
+  width: 95%;
+  height: 95%;
+  min-height: 95vh;
+  min-width: 95vw;
+  border-bottom-left-radius: 205px 7px;
+  border-bottom-right-radius: 12px 90px;
+  border-top-right-radius: 255px 18px;
+  border-top-left-radius: 10px 155px;
+}
+
+.border.thick {
+  border: solid 3px lightblue;
+}
+.border-2.thin {
+  border: solid 2px lightblue;
+}
+
+@media screen and (max-width: 500px) {
+  .border {
+    padding: 0;
+    min-width: 95vw;
+    min-height: 95vh;
+  }
+}
+
+@media screen and (max-height: 660px),(max-width: 389px) {
+  .border {
+    border: none!important;
+  }
 }
