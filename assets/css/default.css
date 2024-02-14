@@ -216,7 +216,6 @@ table, th, td {
 .middle-align {
   display: flex;
   align-items: center;
-  text-transform: uppercase;
   text-decoration: none;
 }
 
@@ -379,6 +378,12 @@ h1.super {
   max-height: 95vh;
   max-width: 95vw;
   padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
   border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
