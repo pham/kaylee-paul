@@ -420,7 +420,7 @@ h1.super {
 }
 
 @media screen and (max-height: 660px),(max-width: 389px) {
-  .border {
+  .border, .border::after {
     border: none!important;
   }
 }

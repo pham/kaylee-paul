@@ -1,13 +1,13 @@
-title: "Paul &times; Kaylee"
+title: "Paul ❤ Kaylee"
 description: >
-  Paul &times; Kaylee &bull; February 29th.
+  Paul × Kaylee • February 29th, 2024 •
   Many waters cannot quench love,
   neither can the floods drown it.
-  Songs of Solomon 8:7
+  &mdash; Songs of Solomon 8:7
 
 info:
   date_format: "%b %d, %y"
-  short_name: "Paul+Kaylee"
+  short_name: "Paul❤Kaylee"
   color:
     theme: "#ffc100"
     bg: "#06113C"
