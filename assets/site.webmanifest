@@ -25,6 +25,18 @@
     {%- endfor %}
   ],
   {%- endif %}
+  {%- if info.screenshots %}
+  "screenshots": [
+    {%- for ss in info.screenshots %}
+    {
+      "src": "{{ ss.src }}",
+      "sizes": "{{ ss.sizes }}",
+      "type": "{{ ss.type }}",
+      "form_factor": "{{ ss.form }}"
+    }{%- if forloop.index != forloop.length %},{%- endif %}
+    {%- endfor %}
+  ],
+  {%- endif %}
   "icons": [
     {%- for px in info.logo.sizes %}
     {
