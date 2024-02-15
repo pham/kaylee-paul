@@ -29,7 +29,8 @@ async function add(e) {
   }
 
   const id = ID(phone);
-  const ret = await apost(`/insert/${id}`, 'lovelove', {
+  const passcode = sessionStorage.getItem('bearer');
+  const ret = await apost(`/insert/${id}`, bearer, {
     guests: parseInt(guests),
     phone,
     name,
@@ -42,3 +43,6 @@ async function add(e) {
   return populate('rsvp-add');
 }
 
+async function callback(pw) {
+  query('#rsvp-add').classList.add('visible');
+}

@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<section id='guests' class='page center-box-container visible'>
+<section id='guests' class='page center-box-container'>
   {% include logo.html %}
   <h1>guests</h1>
 
@@ -19,6 +19,10 @@ layout: default
     </thead>
     <tbody id='list'></tbody>
   </table>
+
+  <a class='special spacer-2' href='/rsvp-add'>add a new rsvp</a>
 </section>
 
 <script src='/assets/js/guests.js'></script>
+
+{% include auth.html %}

@@ -178,7 +178,7 @@ body::-webkit-scrollbar {
   background-color: transparent;
 }
 body::-webkit-scrollbar-thumb {
-  background-color: rgba(229,168,35,0.9);
+  background-color: rgb(173 216 230 / 70%);
   border-radius: 6px;
 }
 body::-webkit-scrollbar-corner {

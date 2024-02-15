@@ -1,9 +1,4 @@
-async function list(bearer) {
-  const pug = location.hash.substr(1)
-    || location.pathname.split('/')[2];
-
-  const info = await aget('/list', bearer);
-
+function list(info) {
   if (!info?.data) return;
 
   const {data} = info;
@@ -27,8 +22,8 @@ async function list(bearer) {
   return arr.sort(sort);
 }
 
-async function init(bearer) {
-  const info = await list(bearer);
+function draw(data) {
+  const info = list(data);
   if (!info) return;
 
   const _el = (id) => document.getElementById(id);
@@ -69,7 +64,9 @@ async function init(bearer) {
   _el('stats').hidden = false;
 }
 
-(async () => {
-  await init('lovelove');
-})();
+async function callback(pw) {
+  const info = await aget('/list', pw);
+  draw(info);
+  query('#guests').classList.add('visible');
+}
 

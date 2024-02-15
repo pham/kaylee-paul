@@ -1,0 +1,9 @@
+
+<main id='auth'>
+  <div class='border thick'>
+    {% include input.html class='spacer-1' name='passcode' label='Passcode' enabled=1 type='password' %}
+    {% include button.html class='spacer-2' id='auth-btn' dataId='auth' label='Access' onclick='access(this)' %}
+  </div>
+</main>
+
+<script src='/assets/js/auth.js'></script>
