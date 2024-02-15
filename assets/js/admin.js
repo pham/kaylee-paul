@@ -44,5 +44,11 @@ async function add(e) {
 }
 
 async function callback(pw) {
-  query('#rsvp-add').classList.add('visible');
+  try {
+    const info = await aget('/access', pw);
+    query('#rsvp-add').classList.add('visible');
+    return true;
+  } catch {
+    return false;
+  }
 }

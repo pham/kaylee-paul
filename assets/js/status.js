@@ -14,7 +14,7 @@ function error() {
   el.innerText = confirmed ? 'accepted' : 'declined';
   el.hidden = false;
 
-  query('h1.name').innerText = name;
+  query('h2.name').innerText = name;
   if (short)
     query('p span.short').innerText = short + ', your';
 

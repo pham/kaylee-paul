@@ -1,9 +1,21 @@
 
 <main id='auth'>
-  <div class='border thick'>
-    {% include input.html class='spacer-1' name='passcode' label='Passcode' enabled=1 type='password' %}
-    {% include button.html class='spacer-2' id='auth-btn' dataId='auth' label='Access' onclick='access(this)' %}
-  </div>
+  <form class='border thick'>
+    {% include input.html
+       enabled=1
+       class='spacer-1'
+       name='passcode'
+       label='Passcode'
+       type='password'
+    %}
+    {% include button.html
+       class='spacer-1'
+       id='auth-btn'
+       dataId='auth'
+       label='Access'
+       onclick='access(this)'
+    %}
+  </form>
 </main>
 
 <script src='/assets/js/auth.js'></script>

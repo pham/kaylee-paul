@@ -1,4 +1,4 @@
-function access(e) {
+async function access(e) {
   const divId = e?.dataset?.id;
   const passcode = query(`#${divId} input[name="passcode"]`)
 
@@ -12,15 +12,14 @@ function access(e) {
   e.disabled = true;
   passcode.disabled = true;
 
-  try {
-    callback(passcode.value);
+  const perm = await callback(passcode.value);
+  if (perm) {
     query('#auth').remove();
     sessionStorage.setItem('bearer', passcode.value);
-  } catch (err) {
+  } else {
     passcode.classList.add('error');
     passcode.value = '';
     sessionStorage.removeItem('bearer');
-    console.error(err);
   }
 
   e.disabled =
@@ -29,9 +28,17 @@ function access(e) {
 
 (async () => {
   const bearer = sessionStorage.getItem('bearer');
+  const form = query('#auth form');
+  const inp = query('#auth input[name="passcode"]');
+  const btn = query('#auth-btn');
   if (bearer) {
-    query('#auth input[name="passcode"]').value = bearer;
-    access(query('#auth-btn'));
+    inp.value = bearer;
+    access(btn);
+  } else {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      access(btn);
+    });
   }
 })();
 

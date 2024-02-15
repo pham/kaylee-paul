@@ -65,8 +65,13 @@ function draw(data) {
 }
 
 async function callback(pw) {
-  const info = await aget('/list', pw);
-  draw(info);
-  query('#guests').classList.add('visible');
+  try {
+    const info = await aget('/list', pw);
+    draw(info);
+    query('#guests').classList.add('visible');
+    return true;
+  } catch {
+    return false;
+  }
 }
 

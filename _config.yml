@@ -1,4 +1,4 @@
-title: "Paul ❤ Kaylee"
+title: "Paul ♥ Kaylee"
 description: >
   Paul × Kaylee • February 29th, 2024 •
   Many waters cannot quench love,
@@ -7,7 +7,7 @@ description: >
 
 info:
   date_format: "%b %d, %y"
-  short_name: "Paul❤Kaylee"
+  short_name: "Paul♥ Kaylee"
   color:
     theme: "#add8e6"
     bg: "#ffffff"
@@ -37,7 +37,7 @@ info:
     - Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200
     - Cormorant+Garamond+Display
     - Be+Vietnam+Pro
-    - Passions+Conflict
+    - Festive
     - Montez
     - Share+Tech+Mono
 

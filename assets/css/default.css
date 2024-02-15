@@ -3,7 +3,7 @@ html {
   --font-sans: 'Be Vietnam Pro', sans-serif;
   --font-serif: 'Cormorant Garamond', serif;
   --font-special: 'Montez', serif;
-  --font-name: 'Passions Conflict', serif;
+  --font-name: 'Festive', serif;
 
   --blueColor: #0055A2;
   --goldColor: #e5a823;
@@ -39,7 +39,7 @@ body {
 }
 
 main {
-  min-height: 100vh !important;
+  min-height: 100dvh !important;
   position: relative;
 }
 
@@ -56,7 +56,7 @@ main {
   opacity: 0;
   visibility: hidden;
   transition: opacity 1000ms;
-  background-image: linear-gradient(157deg, #06113C, #143F6B);
+  background-image: linear-gradient(315deg, #06113C, #143F6B);
   z-index: 0;
 }
 
@@ -162,6 +162,10 @@ h1 + p {
   margin: -50px 0 2em 0;
 }
 
+h2.name {
+  font-size: 2em;
+  font-weight: normal;
+}
 .name {
   font-family: var(--font-name);
 }
@@ -377,8 +381,8 @@ h1.super {
 
 .border {
   background:transparent;
-  max-height: 95vh;
-  max-width: 95vw;
+  max-height: 95svh;
+  max-width: 95svw;
   padding: 2rem;
 
   display: flex;
@@ -415,8 +419,8 @@ h1.super {
 @media screen and (max-width: 500px) {
   .border {
     padding: 0;
-    min-width: 95vw;
-    min-height: 95vh;
+    min-width: 95dvw;
+    min-height: 95dvh;
   }
   br.soft {
     display: none;
