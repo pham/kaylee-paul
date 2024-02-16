@@ -1,0 +1,12 @@
+- label: pastor
+  name: [ "Thành Trần" ]
+- label: bride
+  name: [ "Kaylee Tú Linh Hoàng" ]
+- label: groom
+  name: [ "Paul Khôi Nguyên Phạm" ]
+- label: flower girl
+  name: [ "Nora Phạm" ]
+- label: bridemaids
+  name: [ "Deborah Lê", "Séraphine Phạm" ]
+- label: groomsmen
+  name: [ "Nathan Phạm", "Jadon Phạm" ]
