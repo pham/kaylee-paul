@@ -12,14 +12,17 @@ async function access(e) {
   e.disabled = true;
   passcode.disabled = true;
 
-  const perm = await callback(passcode.value);
-  if (perm) {
+  try {
+    const pw = passcode.value;
+    await aget('/access', pw);
     query('#auth').remove();
-    sessionStorage.setItem('bearer', passcode.value);
-  } else {
+    sessionStorage.setItem('bearer', pw);
+    callback(pw);
+  } catch(error) {
     passcode.classList.add('error');
     passcode.value = '';
     sessionStorage.removeItem('bearer');
+    console.error(error);
   }
 
   e.disabled =

@@ -6,8 +6,8 @@ guestbook: guestbook
 
 {% assign MAIN = site.data.main %}
 <main>
-  <div class='border thick'>
-    <h1 class='super spacer-2'>{{ MAIN.hero }}</h1>
+  <div class='border'>
+    <img class='spacer-4' src='{{ MAIN.logo }}' width=400 alt='{{ MAIN.hero }}' title='{{ MAIN.hero }}' />
     <small>{{ MAIN.date }}</small>
 
     <blockquote class='spacer-4'>

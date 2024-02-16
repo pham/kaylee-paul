@@ -1,4 +1,5 @@
 hero: "Paul × Kaylee"
+logo: /assets/paul-kaylee.svg
 date: "February 29th"
 time: "10 a.m."
 quote:
@@ -13,3 +14,15 @@ venue:
     Milpitas, CA 95035
   href: https://maps.app.goo.gl/AtSUskFLbN7xFKXK9
   logo: https://milpitas.cc/assets/logo.svg
+
+main_menu:
+  - label: wedding party
+    href: /modules/party
+  - label: families
+    href: /modules/trees
+  - label: ceremony
+    href: /modules/ceremony
+  - label: reception
+    href: /modules/reception
+  - label: guestbook
+    href: /modules/guestbook

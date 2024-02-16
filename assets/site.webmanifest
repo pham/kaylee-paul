@@ -10,6 +10,7 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
+  "id": "/",
   "description": "{{ site.description | strip_newlines }}",
   "orientation": "portrait-primary",
   "lang": "en",
@@ -60,6 +61,7 @@
   ],
   "display_override": [
     "standalone",
-    "fullscreen"
+    "fullscreen",
+    "window-controls-overlay"
   ]
 }

@@ -7,7 +7,7 @@ description: >
 
 info:
   date_format: "%b %d, %y"
-  short_name: "Paul♥ Kaylee"
+  short_name: "Paul ♥ Kaylee"
   color:
     theme: "#add8e6"
     bg: "#ffffff"
@@ -24,10 +24,14 @@ info:
     alt_size: 70
     sizes: [ 48, 96, 144, 192, 300, 512 ]
   screenshots:
-    - src: banner.png
+    - src: /assets/banner.png
       sizes: 1024x577
       type: image/png
       form: wide
+    - src: /assets/card.png
+      sizes: 577x1024
+      type: image/png
+      form: narrow
   meta:
     apple_icon: "logo-square-300.png"
     og_image: "banner.png"
@@ -62,7 +66,7 @@ defaults:
   - scope:
       type: "modules"
     values:
-      layout: "modules"
+      layout: "module"
 
 include:
   - index.html

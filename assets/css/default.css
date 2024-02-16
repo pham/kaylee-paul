@@ -36,8 +36,7 @@ body {
   padding: 0;
   background-image: linear-gradient(315deg, #06113C, #143F6B);
   background-repeat: no-repeat;
-  background-size: stretch;
-  height: 100%;
+  min-height: 100svh;
 }
 
 main {
@@ -158,6 +157,11 @@ h1 {
 h1 + small {
   margin-top: -50px;
   color: var(--color-fade);
+  font-size: 0.7em;
+}
+img + small {
+  margin-top: -30px;
+  color: var(--color-accent);
   font-size: 0.7em;
 }
 h1 + p {
@@ -416,6 +420,26 @@ h1.super {
   border-top-left-radius: 10px 155px;
   border: solid 3px var(--color-accent-fade);
   z-index: -1;
+}
+
+.menu-item {
+  display: block;
+  font-size: 1.5em;
+  padding: 0.5em;
+  border: solid 2px transparent;
+}
+
+.menu-item:hover {
+  background-color: var(--color-dark);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  box-shadow: rgba(0, 0, 0, .7) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  outline: none;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
 }
 
 @media screen and (max-width: 500px) {
