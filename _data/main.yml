@@ -23,3 +23,5 @@ main_menu:
   - label: reception
   - label: guestbook
   - label: families
+  - label: guests
+    href: /guests
