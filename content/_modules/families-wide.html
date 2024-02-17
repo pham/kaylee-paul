@@ -1,0 +1,31 @@
+---
+tree: horizontal
+---
+
+<h1>Bride's Family</h1>
+<div class='tree'>
+  {% assign parents = site.data.family.bride.parents %}
+  <ul>
+    {% include tree/hblock.html name=parents.name children=parents.children %}
+  </ul>
+</div>
+
+<div style='margin-top: 6em'></div>
+<h1>Groom's Family</h1>
+<div class='tree'>
+  {% assign parents = site.data.family.groom.parents %}
+  <ul>
+    {% include tree/hblock.html name=parents.name children=parents.children %}
+  </ul>
+</div>
+
+<div style='margin-top: 6em'></div>
+<h1>Paul's God Family</h1>
+<div class='tree'>
+  {% assign parents = site.data.family.paul.parents %}
+  <ul>
+    {% include tree/hblock.html name=parents.name children=parents.children %}
+  </ul>
+</div>
+
+{% include button.html href='/modules/families' class='spacer-4' label='Vertical Graph' %}

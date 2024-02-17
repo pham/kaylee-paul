@@ -21,7 +21,7 @@ main_menu:
   - label: ceremony
     href: /modules/ceremony
   - label: reception
-  - label: guestbook
   - label: families
+    href: /modules/families
   - label: guests
     href: /guests
