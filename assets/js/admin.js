@@ -30,7 +30,7 @@ async function add(e) {
 
   const id = ID(phone);
   const passcode = sessionStorage.getItem('bearer');
-  const ret = await apost(`/insert/${id}`, bearer, {
+  const ret = await apost(`/insert/${id}`, passcode, {
     guests: parseInt(guests),
     phone,
     name,

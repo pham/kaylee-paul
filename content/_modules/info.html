@@ -1,0 +1,26 @@
+---
+---
+
+{% assign MAIN = site.data.main %}
+
+<h1>event info</h1>
+
+<p class='spacer-1'>
+  Please come celebrate with us on<br/>
+  <span class='large'>{{ MAIN.date }}</span>
+</p>
+<p>
+  Ceremony starts at<br/>
+  <span class='large'>{{ MAIN.time }}</span>
+</p>
+
+{% if MAIN.venue.logo -%}
+<img src='{{ MAIN.venue.logo }}' width=70 title='{{ MAIN.venue.name }}' alt='{{ MAIN.venu.name }}' />
+{% endif -%}
+
+<p>
+  <strong>{{ MAIN.venue.name }}</strong><br/>
+  <a target='_blank' href='{{ MAIN.venue.href }}'>
+    {{ MAIN.venue.address }}
+  </a>
+</p>
