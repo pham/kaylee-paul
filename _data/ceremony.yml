@@ -1,0 +1,103 @@
+- label: prelude
+  name: "Quartet &middot; Chính, Naomi, Daniel, Nathan"
+  items:
+  - label: Jesu Joy of Man's Desiring
+    author: Johann Sebastian Bach
+  - label: Air on the G String
+    author: Johann Sebastian Bach
+  - label: Canon in D
+    author: Johann Pachelbel
+- label: processional
+  name: Pastor Thành Trần
+  items:
+  - label: Pastor & Groom
+    name: Pastor Thành & Pastor Paul
+  - label: Groomsmen
+    name: Nathan & Jadon
+  - label: Bridesmaids
+    name: Deborah & Seraphine
+  - label: Flower Girl
+    name: Nora
+  - label: Lohengrin
+    author: Richard Wagner
+    name: Quartet
+  - label: Bride
+    name: Kaylee
+- label: prayer & welcome
+  name: Pastor Thành Trần
+  items:
+  - label: Sample Text
+    text:
+    - We are gathered here in the sight of God and these witnesses to unite Paul and Kaylee in holy matrimony.
+      As believers in Jesus Christ, they recognize that it was God who instituted marriage, and who said,
+      "It is not good for man to be alone. I will make a helper suitable for him."
+      The God who made and redeemed them also instituted this relationship they are about to enter.
+    - Paul and Kaylee, the vows you are about to take are not to be taken without careful thought and prayer.
+      For in them, you are committing yourselves exclusively the one to the other for as long as you both shall live.
+      This love is not to be diminished by difficult circumstances, and it is only to be dissolved by death.
+    - As God's children by faith in Jesus Christ, the relationship of marriage is especially meaningful.
+      Certainly it is possible for non-believers to marry,
+      but only members of God's family by faith in Jesus Christ can ever experience the joy
+      and fulfillment which God intends for marriage to have.
+      Let me remind you, Paul and Kaylee, your home will never be what God intends for it to be if you leave Him out of your relationship.
+      As you are obedient to the Word of God, and allow God to control your relationship,
+      your home will be the place of joy and testimony to the world that God intends.
+- label: scripture readings
+  items:
+  - label: Cô-rinh-tô 13
+    author: Sứ đồ Phao-lô
+    name: Deborah
+  - label: Corinthians 13
+    author: Apostle Paul
+    name: Jadon
+- label: worship
+  name: Antares Phạm
+  items:
+  - label: Need Title
+    name: Antares
+- label: homily
+  name: Pastor Thành Trần
+  items:
+  - label: Message Title
+    author: Scripture Reference
+- label: declaration
+  name: Pastor Thành Trần
+  items:
+  - label: Wedding Vows
+    name: Bride & Groom
+  - label: Ring Vows
+    name: Pastor + Bride & Groom
+  - label: Blessings
+    name: Pastor
+- label: pronouncement
+  name: Pastor Thành Trần
+  items:
+  - label: Husband & Wife
+    text:
+    - For as much as Paul and Kaylee have consented together in holy wedlock,
+      and have witnessed the same before God and these witnesses,
+      and thereto have pledged their faithfulness each to the other,
+      and have pledged the same by the giving and receiving each of a ring,
+      by the authority invested in me as a minister of the gospel according to the laws of the State of California,
+      I pronounce that they are husband and wife together, in the name of the Father, and of the Son, and of the Holy Spirit.
+    - Those that God has joined together, let no man put asunder.
+  - label: Parents Appreciation
+    name: Groom
+  - label: Largo from Winter Season
+    author: Antonio Vivaldi
+    name: Lê Ngọc Chính
+  - label: Introduction
+    text:
+    - Now it is my happy privilege to introduce to you for the first time, Mr. and Mrs. Paul and Kaylee Pham.
+- label: recessional
+  items:
+  - label: Wedding March
+    author: Mendelssohn
+  - label: Bride & Groom
+    name: Kaylee & Paul
+  - label: Bridesmaids
+    name: Deborah & Sera
+  - label: Groomsmen
+    name: Nanthan & Jadon
+  - label: Guests
+    name: "Ushers &middot; Vinh, Alvin, Hưng, Minh"

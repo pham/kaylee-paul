@@ -1,12 +1,26 @@
-- label: pastor
-  name: [ "Thành Trần" ]
-- label: bride
-  name: [ "Kaylee Tú Linh Hoàng" ]
-- label: groom
-  name: [ "Paul Khôi Nguyên Phạm" ]
-- label: flower girl
-  name: [ "Nora Phạm" ]
+- label: bride's parents
+  people:
+    - name: "Hoàng Tiến Thắng"
+      alt: bố (vắng mặt)
+    - name: "Nguyễn Thị Xuân"
+      alt: mẹ (vắng mặt)
+- label: groom's parents
+  people:
+    - name: "Phạm Đức Long"
+      alt: bố
+    - name: "Lê Thị Ngọc Mai"
+      alt: mẹ
 - label: bridemaids
-  name: [ "Deborah Lê", "Séraphine Phạm" ]
+  people:
+    - name: "Deborah Lê"
+    - name: "Séraphine Phạm"
 - label: groomsmen
-  name: [ "Nathan Phạm", "Jadon Phạm" ]
+  people:
+    - name: "Nathan Phạm"
+    - name: "Jadon Phạm"
+- label: flower girl
+  people:
+    - name: "Nora Phạm"
+- label: coordinator
+  people:
+    - name: Antares Phạm

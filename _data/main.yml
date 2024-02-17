@@ -18,11 +18,8 @@ venue:
 main_menu:
   - label: wedding party
     href: /modules/party
-  - label: families
-    href: /modules/trees
   - label: ceremony
     href: /modules/ceremony
   - label: reception
-    href: /modules/reception
   - label: guestbook
-    href: /modules/guestbook
+  - label: families

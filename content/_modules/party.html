@@ -1,0 +1,15 @@
+---
+---
+
+{% assign PARTY = site.data.party %}
+<h1>wedding party</h1>
+
+{% for item in PARTY %}
+  <h3 class='accent spacer-2 pull-1'>{{ item.label }}</h3>
+  {% for person in item.people -%}
+    <h2 class='name top-1'>{{ person.name }}</h2>
+    {% if person.alt -%}
+      <p class='squeeze-2'>{{ person.alt }}</p>
+    {% endif -%}
+  {%- endfor %}
+{%- endfor %}

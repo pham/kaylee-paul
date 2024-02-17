@@ -1,3 +1,16 @@
-<a class="middle-align" href="/">
-  <img src="/assets/logo-simple.svg" width="100" alt="Kaylorful" title="Paul & Kaylee"/>
+<a class='middle-align column' href='/' title='{{ site.title }}'>
+  <img
+    src='/assets/logo-simple.svg'
+    width='100'
+    alt='{{ site.title }}'
+    title='{{ site.title }}'
+  />
+  {% if include.names %}
+    <img
+      src='/assets/paul-kaylee.svg'
+      width='200'
+      alt='{{ site.title }}'
+      title='{{ site.title }}'
+    />
+  {% endif %}
 </a>

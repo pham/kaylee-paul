@@ -1,0 +1,27 @@
+---
+---
+
+{% assign INFO = site.data.ceremony %}
+<h1>ceremony</h1>
+
+{% for section in INFO %}
+  <hr />
+  <h3 class='accent spacer-2 pull-1'>{{ section.label }}</h3>
+  {%- if section.name %}
+    <p>{{ section.name }}</p>
+  {% endif -%}
+  {% for item in section.items -%}
+    {% if item.author -%}
+      <span style='font-size: 0.7em; margin: 3em 0 -0.5em 0'>{{ item.author }}</span>
+      <h2 class='top-0'>{{ item.label }}</h2>
+    {% else -%}
+      <h2>{{ item.label }}</h2>
+    {% endif -%}
+    {% if item.name -%}
+      <p class='squeeze-1'>{{ item.name }}</p>
+    {% endif -%}
+    {% for text in item.text -%}
+      <p>{{ text }}</p>
+    {% endfor -%}
+  {%- endfor %}
+{%- endfor %}
