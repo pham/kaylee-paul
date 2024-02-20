@@ -32,23 +32,29 @@ workbox.routing.registerRoute(
 );
 
 self.addEventListener('fetch', (event) => {
-  if (event.request.mode === 'navigate') {
-    event.respondWith((async () => {
-      try {
-        const preloadResp = await event.preloadResponse;
+  const url = new URL(event.request.url);
+  if ( event.request.mode !== 'navigate'
+    || event.request.method !== 'GET'
+    || url.hostname.endsWith('run.app')
+    || url.protocol === 'chrome-extension:'
+    || url.pathname.match(/^\/(admin|rsvp|status|guests)/)
+  ) return;
 
-        if (preloadResp) {
-          return preloadResp;
-        }
+  event.respondWith((async () => {
+    try {
+      const preloadResp = await event.preloadResponse;
 
-        const networkResp = await fetch(event.request);
-        return networkResp;
-      } catch (error) {
-
-        const cache = await caches.open(CACHE);
-        const cachedResp = await cache.match(offlineFallbackPage);
-        return cachedResp;
+      if (preloadResp) {
+        return preloadResp;
       }
-    })());
-  }
+
+      const networkResp = await fetch(event.request);
+      return networkResp;
+    } catch (error) {
+
+      const cache = await caches.open(CACHE);
+      const cachedResp = await cache.match(offlineFallbackPage);
+      return cachedResp;
+    }
+  })());
 });
