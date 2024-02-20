@@ -75,9 +75,12 @@ async function download(fname='guests.csv') {
   const info = await list(await aget('/list', passcode));
   if (!info) return false;
 
-  const data = [];
+  const data = [
+    'ID,Name,Type,Phone,Tag',
+  ];
+  let idx = 1;
   for (const {name,type,phone,kid} of info) {
-    data.push([name,type,phone,kid ? 'kid' : ''].join(','));
+    data.push([idx++, name, type, phone, kid ? 'kid' : ''].join(','));
   }
 
   const csvData = new Blob( ['\ufeff'+data.join("\n") ], {
