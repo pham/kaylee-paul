@@ -3,10 +3,11 @@
 {% assign MAIN = site.data.main %}
 <main>
   <div class='border'>
-    <img src='{{ MAIN.logo }}' width=400 alt='{{ MAIN.hero }}' title='{{ MAIN.hero }}' />
+    <img src='{{ MAIN.logo }}' width=400 alt='{{ MAIN.hero }}' title='{{ MAIN.hero }}' style='max-width: 80svw' />
     <small>{{ MAIN.date }}</small>
 
-    <div class='spacer-2 special'>
+
+    <div class='spacer-2 push-1 special'>
       {% for item in MAIN.main_menu -%}
         {% if item.href -%}
           <a class='menu-item' href='{{ item.href }}' title='{{ item.label }}'>{{ item.label }}</a>
@@ -15,5 +16,10 @@
         {% endif -%}
       {% endfor -%}
     </div>
+    <footer>
+      <span>milpitas</span>
+      <img src='{{ MAIN.symbol }}' width=40 alt='{{ MAIN.hero }}' title='{{ MAIN.hero }}' />
+      <span>california</span>
+    </footer>
   </div>
 </main>
