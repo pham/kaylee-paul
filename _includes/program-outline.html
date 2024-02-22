@@ -1,0 +1,27 @@
+{% for section in include.info %}
+  <h3 class='accent spacer-2'>{{ section.label }}</h3>
+  {%- if section.name %}
+    <p class='accent'>{{ section.name }}</p>
+  {% endif -%}
+  {% for item in section.items -%}
+    {%- unless item.hidden %}
+      {% if item.pretext -%}
+        <span style='font-size: 0.7em; margin: 3em 0 -0.2em 0' class='text-fade'>{{ item.pretext }}</span>
+        <h2 class='top-0'>{{ item.label }}</h2>
+      {% else -%}
+        <h2>{{ item.label }}</h2>
+      {% endif -%}
+      {% if item.name -%}
+        <p class='squeeze-1'>{{ item.name }}</p>
+      {% endif -%}
+      {% if item.text -%}
+        <details {% unless item.header -%}open{% endunless -%}>
+          <summary>{{ item.header }}</summary>
+          {% for text in item.text -%}
+            <p>{{ text }}</p>
+          {% endfor -%}
+        </details>
+      {% endif -%}
+    {%- endunless %}
+  {%- endfor %}
+{%- endfor %}

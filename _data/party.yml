@@ -1,15 +1,15 @@
 - label: bride's parents
   people:
     - name: "Hoàng Tiến Thắng"
-      alt: bố (vắng mặt)
+      alt: bố / father (việt nam)
     - name: "Nguyễn Thị Xuân"
-      alt: mẹ (vắng mặt)
+      alt: mẹ / mother (việt nam)
 - label: groom's parents
   people:
     - name: "Phạm Đức Long"
-      alt: bố
+      alt: bố / father
     - name: "Lê Thị Ngọc Mai"
-      alt: mẹ
+      alt: mẹ / mother
 - label: bridemaids
   people:
     - name: "Deborah Lê"
@@ -21,6 +21,14 @@
 - label: flower girl
   people:
     - name: "Nora Phạm"
+- label: musicians
+  people:
+    - name: "Chính Lê"
+      alt: violin
+    - name: "Naomi Lê"
+      alt: piano
+    - name: "Daniel Lê"
+      alt: cello
 - label: coordinator
   people:
     - name: Antares Phạm

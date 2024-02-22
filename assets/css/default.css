@@ -5,17 +5,13 @@ html {
   --font-special: 'Montez', serif;
   --font-name: 'Festive', serif;
 
-  --blueColor: #0055A2;
-  --goldColor: #e5a823;
-  --grayColor: #939597;
-  --logoColor: #231f20;
-
   --color-fade: #999999;
   --color-dark: #05123d;
   --color-light: #aaaaaa;
   --color-alt: black;
   --color-accent: rgb(173 216 230 / 100%);
   --color-accent-fade: rgb(173 216 230 / 70%);
+  --color-on-background: steelblue;
 
   box-sizing: border-box;
 }
@@ -46,10 +42,14 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .hidden { display: none!important; }
 .accent { color: var(--color-accent); }
+.accent-fade { color: var(--color-accent-fade); }
+.text-fade { color: var(--color-fade); }
+.on-background { color: var(--color-on-background); }
 
 .page {
   position: absolute;
@@ -140,7 +140,7 @@ a, a:visited {
   text-decoration: none;
 }
 
-p {
+p, summary {
   line-height: 1.6;
   font-family: var(--font-serif);
   font-size: 21px;
@@ -465,6 +465,25 @@ h1.super {
   border-bottom-right-radius: 225px 15px;
   border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
+}
+
+summary {
+  color: deepskyblue;
+}
+
+details[open] p {
+  animation: animateDown 0.2s linear forwards;
+}
+
+@keyframes animateDown {
+  0% {
+    opacity: 0;
+    transform: translatey(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatey(0);
+  }
 }
 
 @media screen and (max-width: 500px) {

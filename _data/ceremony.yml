@@ -1,17 +1,16 @@
 - label: prelude
-  name: "Quartet &middot; Chính, Naomi, Daniel, Nathan"
+  name: "Musicians &middot; Chính, Naomi, Daniel"
   items:
   - label: Jesu Joy of Man's Desiring
-    author: Johann Sebastian Bach
+    pretext: Johann Sebastian Bach
   - label: Air on the G String
-    author: Johann Sebastian Bach
+    pretext: Johann Sebastian Bach
   - label: Canon in D
-    author: Johann Pachelbel
+    pretext: Johann Pachelbel
 - label: processional
-  name: Pastor Thành Trần
   items:
   - label: Pastor & Groom
-    name: Pastor Thành & Pastor Paul
+    name: Pastor Thành & Paul Phạm
   - label: Groomsmen
     name: Nathan & Jadon
   - label: Bridesmaids
@@ -19,14 +18,15 @@
   - label: Flower Girl
     name: Nora
   - label: Lohengrin
-    author: Richard Wagner
-    name: Quartet
+    pretext: Richard Wagner
   - label: Bride
-    name: Kaylee
+    name: Kaylee Hoàng
 - label: prayer & welcome
-  name: Pastor Thành Trần
   items:
+  - label: Pastor Thành Trần
+    pretext: Officiant / Chủ lễ
   - label: Sample Text
+    hidden: true
     text:
     - We are gathered here in the sight of God and these witnesses to unite Paul and Kaylee in holy matrimony.
       As believers in Jesus Christ, they recognize that it was God who instituted marriage, and who said,
@@ -44,55 +44,109 @@
       your home will be the place of joy and testimony to the world that God intends.
 - label: scripture readings
   items:
-  - label: Cô-rinh-tô 13
-    author: Sứ đồ Phao-lô
-    name: Deborah
-  - label: Corinthians 13
-    author: Apostle Paul
-    name: Jadon
+  - label: Deborah Lê
+    pretext: Người đọc
+    header: Cô-rinh-tô 13
+    text:
+      - "Dầu tôi nói được các thứ tiếng loài người và thiên-sứ, nếu không có tình yêu-thương, thì tôi chỉ như đồng kêu lên hay là chập-chỏa vang tiếng."
+      - "Dầu tôi được ơn nói tiên-tri, cùng biết đủ các sự mầu-nhiệm và mọi sự hay-biết; dầu tôi có cả đức-tin đến nỗi dời núi được, nhưng không có tình yêu-thương, thì tôi chẳng ra gì."
+      - "Dầu tôi phân-phát gia-tài để nuôi kẻ nghèo-khó, lại bỏ thân mình để chịu đốt, song không có tình yêu-thương, thì đều đó chẳng ích chi cho tôi."
+      - "Tình yêu-thương hay nhịn-nhục; tình yêu-thương hay nhơn-từ; tình yêu-thương chẳng ghen-tị, chẳng khoe mình, chẳng lên mình kiêu-ngạo, chẳng làm đều trái phép, chang kiếm tư-lợi, chẳng nóng-giận, chẳng nghi-ngờ sự dữ, chẳng vui về đều không công-bình, nhưng vui trong lẽ thật."
+      - "Tình yêu-thương hay dung-thứ mọi sự, tin mọi sự, trông-cậy mọi sự, nín-chịu mọi sự."
+      - "Tình yêu-thương chẳng hề hư-mất bao giờ. Các lời tiên-tri sẽ hết, sự ban-cho nói tiếng lạ sẽ thôi, sự thông-biết hầu bị bỏ."
+      - "Vì chưng chúng ta hiểu-biết chưa trọn-vẹn, nói tiên-tri cũng chưa trọn-vẹn; song lúc sự trọn-lành đã đến, thì sự chưa được trọn-lành sẽ bị bỏ."
+      - "Khi tôi còn là con trẻ, tôi nói như con trẻ, tư-tưởng như con trẻ, suy-xét như con trẻ; khi tôi đã thành-nhơn, bèn bỏ những đều thuộc về con trẻ."
+      - "Ngày nay chúng ta xem như trong một cái gương, cách mập-mờ: đến bấy giờ chúng ta sẽ thấy hai mặt đối nhau; ngày nay tôi biết chưa hết: đến bấy giờ tôi sẽ biết như Chúa đã biết tôi vậy."
+      - "Nên bây giờ còn có ba đều nầy: đức-tin, sự trông-cậy, tình yêu-thương; nhưng đều trọng hơn trong ba đều đó là tình yêu-thương."
+  - label: Jadon Pham
+    pretext: Reader
+    header: Corinthians 13
+    text:
+      - "If I speak in the tongues of men or of angels, but do not have love, I am only a resounding gong or a clanging cymbal."
+      - "If I have the gift of prophecy and can fathom all mysteries and all knowledge, and if I have a faith that can move mountains, but do not have love, I am nothing."
+      - "If I give all I possess to the poor and give over my body to hardship that I may boast, but do not have love, I gain nothing."
+      - "Love is patient, love is kind. It does not envy, it does not boast, it is not proud."
+      - "It does not dishonor others, it is not self-seeking, it is not easily angered, it keeps no record of wrongs."
+      - "Love does not delight in evil but rejoices with the truth."
+      - "It always protects, always trusts, always hopes, always perseveres."
+      - "Love never fails. But where there are prophecies, they will cease; where there are tongues, they will be stilled; where there is knowledge, it will pass away."
+      - "For we know in part and we prophesy in part, but when completeness comes, what is in part disappears."
+      - "When I was a child, I talked like a child, I thought like a child, I reasoned like a child. When I became a man, I put the ways of childhood behind me."
+      - "For now we see only a reflection as in a mirror; then we shall see face to face. Now I know in part; then I shall know fully, even as I am fully known."
+      - "And now these three remain: faith, hope and love. But the greatest of these is love."
 - label: worship
-  name: Antares Phạm
   items:
-  - label: Need Title
-    name: Antares
+  - label: O Praise His Name
+    pretext: Benjamin Hastings
+    header: English
+    text:
+      - I cast my mind to Calvary<br/>
+        Where Jesus bled and died for me<br/>
+        I see His wounds His hands His feet<br/>
+        My Saviour on that cursed tree
+      - His body bound and drenched in tears<br/>
+        They laid Him down in Joseph's tomb<br/>
+        The entrance sealed by heavy stone<br/>
+        Messiah still and all alone
+      - <small class='on-background'>Chorus</small><br/>
+        O praise the Name of the Lord our God<br/>
+        O praise His Name forevermore<br/>
+        For endless days we will sing Your praise<br/>
+        Oh Lord oh Lord our God
+      - Then on the third at break of dawn<br/>
+        The Son of heaven rose again<br/>
+        O trampled death where is your sting<br/>
+        The angels roar for Christ the King
+      - He shall return in robes of white<br/>
+        The blazing sun shall pierce the night<br/>
+        And I will rise among the saints<br/>
+        My gaze transfixed on Jesus' face
+  - header: Tiếng Việt
+    text:
+      - Hoài niệm khi xưa nơi Gô-gô-tha<br/>
+        Thật xưa Jesus Ngài chết thay tôi<br/>
+        Những vết thương xưa ở chân-tay Ngài<br/>
+        Thập giá khi xưa Ngài đã treo mình
+      - Vì yêu thương ta nên phó thân mình<br/>
+        Chịu bao đau thương nhục nhã khinh chê<br/>
+        Chúa hiến thân mình cứu tôi khỏi tội<br/>
+        Lòng Chúa yêu tôi thật quá bao la
+      - <small class='on-background'>Điệp khúc</small><br/>
+        Nào cùng hiệp lòng ngợi khen Chúa Chí Cao<br/>
+        Nào cùng thờ lạy Chúa mãi không thôi<br/>
+        Nguyện trọn đời này ca khen Chúa kính yêu<br/>
+        Lòng này mãi chúc tôn Ngài
+      - Rồi Ngài phục sinh chiến thắng huy hoàng<br/>
+        Kìa vua Jêsus lại sống hiển vinh<br/>
+        Ngài thật đã sống chiến thắng vinh quang<br/>
+        Chiến thắng âm ti là chính Con Trời
+      - Thật vinh quang thay khi Chúa trở lại<br/>
+        Và kìa vinh quang rạng rỡ soi ra<br/>
+        Hỡi Chúa yêu thương đến trong tâm này<br/>
+        Lòng chính con đây nguyện bước theo Ngài.
 - label: homily
-  name: Pastor Thành Trần
   items:
-  - label: Message Title
-    author: Scripture Reference
+  - label: The Message
+    pretext: Pastor Thành Trần
 - label: declaration
-  name: Pastor Thành Trần
   items:
   - label: Wedding Vows
     name: Bride & Groom
   - label: Ring Vows
     name: Pastor + Bride & Groom
   - label: Blessings
-    name: Pastor
-- label: pronouncement
-  name: Pastor Thành Trần
-  items:
-  - label: Husband & Wife
-    text:
-    - For as much as Paul and Kaylee have consented together in holy wedlock,
-      and have witnessed the same before God and these witnesses,
-      and thereto have pledged their faithfulness each to the other,
-      and have pledged the same by the giving and receiving each of a ring,
-      by the authority invested in me as a minister of the gospel according to the laws of the State of California,
-      I pronounce that they are husband and wife together, in the name of the Father, and of the Son, and of the Holy Spirit.
-    - Those that God has joined together, let no man put asunder.
-  - label: Parents Appreciation
-    name: Groom
+    name: Pastor Long Phạm
+  - label: Pronouncement
+    name: Pastor Thành Trần
   - label: Largo from Winter Season
-    author: Antonio Vivaldi
+    pretext: Antonio Vivaldi
     name: Lê Ngọc Chính
   - label: Introduction
-    text:
-    - Now it is my happy privilege to introduce to you for the first time, Mr. and Mrs. Paul and Kaylee Pham.
+    name: Pastor Thành Trần
 - label: recessional
   items:
   - label: Wedding March
-    author: Mendelssohn
+    pretext: Mendelssohn
   - label: Bride & Groom
     name: Kaylee & Paul
   - label: Bridesmaids
@@ -100,4 +154,10 @@
   - label: Groomsmen
     name: Nathan & Jadon
   - label: Guests
-    name: "Ushers &middot; Vinh, Alvin, Hưng, Minh"
+    header: Ushers
+    text:
+      - Hưng Phạm<br/>
+        Vinh Trần<br/>
+        Damon Moon<br/>
+        David Urbach<br/>
+        Nehemi Winn

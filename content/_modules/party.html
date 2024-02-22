@@ -9,7 +9,7 @@
   {% for person in item.people -%}
     <h2 class='name top-1'>{{ person.name }}</h2>
     {% if person.alt -%}
-      <p class='squeeze-2'>{{ person.alt }}</p>
+      <small class='squeeze-2 on-background'>{{ person.alt }}</small>
     {% endif -%}
   {%- endfor %}
 {%- endfor %}

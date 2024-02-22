@@ -1,0 +1,35 @@
+- label: welcome
+  items:
+  - label: Master of Ceremony
+    name: Pastor Kiêm Lê
+- label: introduction
+  items:
+  - label: Newlywed
+    name: Mr. & Mrs. Paul & Kaylee Phạm
+- label: lunch
+  items:
+  - label: Menu
+    text:
+      - <small class='on-background'>Main Courses</small><br/>
+        Carved Angus Roast Beef<br/>
+        Poached Salmon<br/>
+        Teriyaki Baked Chiken
+      - <small class='on-background'>Side Dishes</small><br/>
+        Scallop Potatoes<br/>
+        Harvest Rice<br/>
+        Hot Vegetables<br/>
+        Dinner Rolls
+      - <small class='on-background'>Fruits & Vegetables</small><br/>
+        Spring Mix Lettuce<br/>
+        Lotus Salad with Shrimp & Pork<br/>
+        Fresh Fruits
+- label: toasts
+  items:
+  - name: David Phạm
+    label: Bestman
+- label: cake cutting
+  items:
+  - label: Vợ Chồng
+- label: bouquet throwing
+- label: pictures
+- label: thanksgiving
