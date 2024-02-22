@@ -404,6 +404,8 @@ h1.super {
 
 .border {
   background:transparent;
+  width: 95%;
+  height: 95%;
   max-height: 95svh;
   max-width: 95svw;
   padding: 2rem;
