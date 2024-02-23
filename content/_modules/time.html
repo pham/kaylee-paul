@@ -3,7 +3,7 @@
 
 {% assign MAIN = site.data.main %}
 
-<h1>event info</h1>
+<h1>date & time</h1>
 
 <p class='spacer-1'>
   Please come celebrate with us on<br/>
@@ -18,13 +18,14 @@
   Ceremony starts at <strong>{{ MAIN.time }}</strong>
 </p>
 
-{% if MAIN.venue.logo -%}
-<img src='{{ MAIN.venue.logo }}' width=70 title='{{ MAIN.venue.name }}' alt='{{ MAIN.venu.name }}' />
-{% endif -%}
-
 <p>
-  <strong>{{ MAIN.venue.name }}</strong><br/>
-  <a target='_blank' href='{{ MAIN.venue.href }}'>
-    {{ MAIN.venue.address }}
-  </a>
+  When you come, please check in at the guest table and sign our guestbook.
+  We will let you know your reception seating location when you check in.
 </p>
+
+<div class='spacer-4'>
+  <a href='/info' class='line-drawn'>
+    <span class='material-symbols-outlined'>arrow_back_ios_new</span>
+    Back to Information
+  </a>
+</div>

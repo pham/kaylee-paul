@@ -15,7 +15,7 @@
         <p class='squeeze-1'>{{ item.name }}</p>
       {% endif -%}
       {% if item.text -%}
-        <details {% unless item.header -%}open{% endunless -%}>
+        <details class='outline' {% unless item.header -%}open{% endunless -%}>
           <summary>{{ item.header }}</summary>
           {% for text in item.text -%}
             <p>{{ text }}</p>

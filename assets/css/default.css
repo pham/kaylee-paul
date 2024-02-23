@@ -124,6 +124,10 @@ input.line-drawn {
   transform: translate3d(0, 2px, 0);
 }
 
+.line-drawn .material-symbols-outlined {
+  vertical-align: bottom;
+}
+
 .visible {
   opacity: 1;
   visibility: visible;
@@ -140,7 +144,7 @@ a, a:visited {
   text-decoration: none;
 }
 
-p, summary {
+p {
   line-height: 1.6;
   font-family: var(--font-serif);
   font-size: 21px;
@@ -179,6 +183,10 @@ h1 + p {
 }
 .mono {
   font-family: var(--font-mono); monospace;
+}
+.emphasize {
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
 }
 
 body::-webkit-scrollbar {
@@ -232,6 +240,9 @@ table, th, td {
 
 code {
   white-space: pre-wrap;
+  font-size: 1.1rem;
+  background-color: var(--color-on-background);
+  padding: 0 5px;
 }
 
 pre {
@@ -317,6 +328,7 @@ footer {
 }
 footer a {
   display: inline-block;
+  line-height: 0;
 }
 footer span {
   display: inline-block;
@@ -468,8 +480,14 @@ h1.super {
   border-top-right-radius: 15px 225px;
 }
 
-summary {
+details.outline summary {
   color: deepskyblue;
+  line-height: 1.6;
+  font-family: var(--font-serif);
+  font-size: 21px;
+  margin-bottom: 10px;
+  padding: 0 1em;
+  max-width: 400px;
 }
 
 details[open] p {

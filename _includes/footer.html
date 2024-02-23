@@ -1,0 +1,12 @@
+{% assign MAIN = site.data.main %}
+<footer>
+  {% unless include.href -%}
+  <span>milpitas</span>
+  {% endunless -%}
+  <a href='{{ include.href | default: '/guests' }}'>
+    <img src='{{ MAIN.symbol }}' width=40 alt='{{ MAIN.hero }}' title='{{ MAIN.hero }}' />
+  </a>
+  {% unless include.href -%}
+  <span>california</span>
+  {% endunless -%}
+</footer>

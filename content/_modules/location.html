@@ -1,0 +1,40 @@
+---
+---
+
+{% assign MAIN = site.data.main %}
+
+<h1>location</h1>
+
+{% if MAIN.venue.logo -%}
+<img src='{{ MAIN.venue.logo }}' width=70 title='{{ MAIN.venue.name }}' alt='{{ MAIN.venu.name }}' />
+{% endif -%}
+
+<h2 class='accent'>Milpitas Christian Church</h2>
+<p class='squeeze-1'>
+  <a target='_blank' href='{{ MAIN.venue.href }}'>
+    {{ MAIN.venue.address }}
+  </a>
+</p>
+
+<h3 class='accent'>Church Parking</h3>
+<p class='squeeze-1'>
+  We will have parking attendants on site to help you park.
+  There is a limited number of parking spaces, please come early 9-9:30 a.m to help us get you settled.
+  The grass area will also be opened for parking.
+</p>
+
+
+<h3 class='accent'>Street Parking</h3>
+<p class='squeeze-1'>
+  In the event where there are no more parking spaces, you can park on
+  <code>Temple Dr.</code>,
+  <code>E Calaveras Blvd.</code>,
+  or <code>Evans Rd</code> (many parking spaces only a short walk distance).
+</p>
+
+<div class='spacer-4'>
+  <a href='/info' class='line-drawn'>
+    <span class='material-symbols-outlined'>arrow_back_ios_new</span>
+    Back to Information
+  </a>
+</div>

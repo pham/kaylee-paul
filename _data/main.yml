@@ -2,6 +2,7 @@ hero: "Paul × Kaylee"
 logo: /assets/paul-kaylee.svg
 symbol: /assets/logo-square.svg
 date: "February 29th"
+date_year: "February 29th, 2024"
 time: "10 a.m."
 arrival: "9:30 a.m."
 quote:
@@ -18,6 +19,9 @@ venue:
   logo: https://milpitas.cc/assets/logo.svg
 
 main_menu:
+  - label: event information
+    href: /info
+    emphasized: true
   - label: wedding party
     href: /modules/party
   - label: ceremony
@@ -26,5 +30,11 @@ main_menu:
     href: /modules/reception
   - label: families
     href: /modules/families
-  - label: event information
-    href: /modules/information
+
+info_menu:
+  - label: location
+    href: /modules/location
+  - label: date & time
+    href: /modules/time
+  - label: seating
+    href: /modules/seating
