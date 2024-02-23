@@ -25,7 +25,7 @@ if (workbox.navigationPreload.isSupported()) {
 }
 
 workbox.routing.registerRoute(
-  new RegExp('/*'),
+  new RegExp('/assets/*.\.png'),
   new workbox.strategies.StaleWhileRevalidate({
     cacheName: CACHE
   })
