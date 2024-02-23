@@ -10,8 +10,12 @@
   <span class='large'>{{ MAIN.date }}</span>
 </p>
 <p>
-  Ceremony starts at<br/>
-  <span class='large'>{{ MAIN.time }}</span>
+  Please plan to arrive at<br/>
+  <span class='large'>{{ MAIN.arrival }}</span>
+</p>
+
+<p class='push-2 accent'>
+  Ceremony starts at <strong>{{ MAIN.time }}</strong>.
 </p>
 
 {% if MAIN.venue.logo -%}

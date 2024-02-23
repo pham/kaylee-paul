@@ -315,6 +315,9 @@ footer {
   align-items: center;
   color: var(--color-accent-fade);
 }
+footer a {
+  display: inline-block;
+}
 footer span {
   display: inline-block;
   width: 100px;

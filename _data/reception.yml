@@ -27,9 +27,12 @@
   items:
   - name: David Phạm
     label: Bestman
+    header: Pour the glasses
+    text:
+      - Champagne and apple cider are on each table.
+        Please designate a person to open them and pour into the glasses.
+      - Cheers!
 - label: cake cutting
-  items:
-  - label: Vợ Chồng
 - label: bouquet throwing
 - label: pictures
-- label: thanksgiving
+- label: thanks

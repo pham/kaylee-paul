@@ -3,6 +3,7 @@ logo: /assets/paul-kaylee.svg
 symbol: /assets/logo-square.svg
 date: "February 29th"
 time: "10 a.m."
+arrival: "9:30 a.m."
 quote:
   text: |
     Many waters cannot quench love,<br class='soft'/>
@@ -25,5 +26,5 @@ main_menu:
     href: /modules/reception
   - label: families
     href: /modules/families
-  - label: guests
-    href: /guests
+  - label: event information
+    href: /modules/information

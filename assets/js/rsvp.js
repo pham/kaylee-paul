@@ -68,7 +68,7 @@ async function accept(e) {
     }
     await post(`/accept/${id}/${guests}`, payload);
     restore(e);
-    location.href = `/status#${id}`;
+    location.href = `/modules/status#${id}`;
   } catch (er) {
     restore(e);
     location.href = '/error';
@@ -93,7 +93,7 @@ async function decline(e) {
     }
     await post(`/decline/${id}`, payload);
     restore(e);
-    location.href = `/status#${id}`;
+    location.href = `/modules/status#${id}`;
   } catch (er) {
     restore(e);
     location.href = '/error';

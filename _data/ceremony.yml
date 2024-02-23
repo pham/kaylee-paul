@@ -1,6 +1,10 @@
 - label: prelude
-  name: "Musicians &middot; Chính, Naomi, Daniel"
   items:
+  - header: Musicians
+    text:
+    - Chính Lê (violin)
+    - Naomi Lê (piano)
+    - Daniel Lê (cello)
   - label: Jesu Joy of Man's Desiring
     pretext: Johann Sebastian Bach
   - label: Air on the G String
@@ -10,20 +14,24 @@
 - label: processional
   items:
   - label: Pastor & Groom
+    pretext: Chủ lễ & chú rể
     name: Pastor Thành & Paul Phạm
   - label: Groomsmen
+    pretext: Phụ rể
     name: Nathan & Jadon
   - label: Bridesmaids
-    name: Deborah & Seraphine
+    pretext: Phụ dâu
+    name: Deborah & Séraphine
   - label: Flower Girl
     name: Nora
   - label: Lohengrin
     pretext: Richard Wagner
   - label: Bride
+    pretext: Đón dâu
     name: Kaylee Hoàng
 - label: prayer & welcome
   items:
-  - label: Pastor Thành Trần
+  - label: Pastor Thành Tran
     pretext: Officiant / Chủ lễ
   - label: Sample Text
     hidden: true
@@ -53,11 +61,7 @@
       - "Dầu tôi phân-phát gia-tài để nuôi kẻ nghèo-khó, lại bỏ thân mình để chịu đốt, song không có tình yêu-thương, thì đều đó chẳng ích chi cho tôi."
       - "Tình yêu-thương hay nhịn-nhục; tình yêu-thương hay nhơn-từ; tình yêu-thương chẳng ghen-tị, chẳng khoe mình, chẳng lên mình kiêu-ngạo, chẳng làm đều trái phép, chang kiếm tư-lợi, chẳng nóng-giận, chẳng nghi-ngờ sự dữ, chẳng vui về đều không công-bình, nhưng vui trong lẽ thật."
       - "Tình yêu-thương hay dung-thứ mọi sự, tin mọi sự, trông-cậy mọi sự, nín-chịu mọi sự."
-      - "Tình yêu-thương chẳng hề hư-mất bao giờ. Các lời tiên-tri sẽ hết, sự ban-cho nói tiếng lạ sẽ thôi, sự thông-biết hầu bị bỏ."
-      - "Vì chưng chúng ta hiểu-biết chưa trọn-vẹn, nói tiên-tri cũng chưa trọn-vẹn; song lúc sự trọn-lành đã đến, thì sự chưa được trọn-lành sẽ bị bỏ."
-      - "Khi tôi còn là con trẻ, tôi nói như con trẻ, tư-tưởng như con trẻ, suy-xét như con trẻ; khi tôi đã thành-nhơn, bèn bỏ những đều thuộc về con trẻ."
-      - "Ngày nay chúng ta xem như trong một cái gương, cách mập-mờ: đến bấy giờ chúng ta sẽ thấy hai mặt đối nhau; ngày nay tôi biết chưa hết: đến bấy giờ tôi sẽ biết như Chúa đã biết tôi vậy."
-      - "Nên bây giờ còn có ba đều nầy: đức-tin, sự trông-cậy, tình yêu-thương; nhưng đều trọng hơn trong ba đều đó là tình yêu-thương."
+      - "Tình yêu-thương không hề thất bại."
   - label: Jadon Pham
     pretext: Reader
     header: Corinthians 13
@@ -69,18 +73,15 @@
       - "It does not dishonor others, it is not self-seeking, it is not easily angered, it keeps no record of wrongs."
       - "Love does not delight in evil but rejoices with the truth."
       - "It always protects, always trusts, always hopes, always perseveres."
-      - "Love never fails. But where there are prophecies, they will cease; where there are tongues, they will be stilled; where there is knowledge, it will pass away."
-      - "For we know in part and we prophesy in part, but when completeness comes, what is in part disappears."
-      - "When I was a child, I talked like a child, I thought like a child, I reasoned like a child. When I became a man, I put the ways of childhood behind me."
-      - "For now we see only a reflection as in a mirror; then we shall see face to face. Now I know in part; then I shall know fully, even as I am fully known."
-      - "And now these three remain: faith, hope and love. But the greatest of these is love."
+      - "Love never fails."
 - label: worship
   items:
   - label: O Praise His Name
     pretext: Benjamin Hastings
     header: English
     text:
-      - I cast my mind to Calvary<br/>
+      - <small class='on-background'>Verses 1 & 2</small><br/>
+        I cast my mind to Calvary<br/>
         Where Jesus bled and died for me<br/>
         I see His wounds His hands His feet<br/>
         My Saviour on that cursed tree
@@ -93,7 +94,8 @@
         O praise His Name forevermore<br/>
         For endless days we will sing Your praise<br/>
         Oh Lord oh Lord our God
-      - Then on the third at break of dawn<br/>
+      - <small class='on-background'>Verse 3 & 4</small><br/>
+        Then on the third at break of dawn<br/>
         The Son of heaven rose again<br/>
         O trampled death where is your sting<br/>
         The angels roar for Christ the King
@@ -101,9 +103,11 @@
         The blazing sun shall pierce the night<br/>
         And I will rise among the saints<br/>
         My gaze transfixed on Jesus' face
+      - <small class='on-background'>return to chorus</small><br/>
   - header: Tiếng Việt
     text:
-      - Hoài niệm khi xưa nơi Gô-gô-tha<br/>
+      - <small class='on-background'>Câu 1 & 2</small><br/>
+        Hoài niệm khi xưa nơi Gô-gô-tha<br/>
         Thật xưa Jesus Ngài chết thay tôi<br/>
         Những vết thương xưa ở chân-tay Ngài<br/>
         Thập giá khi xưa Ngài đã treo mình
@@ -116,7 +120,8 @@
         Nào cùng thờ lạy Chúa mãi không thôi<br/>
         Nguyện trọn đời này ca khen Chúa kính yêu<br/>
         Lòng này mãi chúc tôn Ngài
-      - Rồi Ngài phục sinh chiến thắng huy hoàng<br/>
+      - <small class='on-background'>Câu 3 & 4</small><br/>
+        Rồi Ngài phục sinh chiến thắng huy hoàng<br/>
         Kìa vua Jêsus lại sống hiển vinh<br/>
         Ngài thật đã sống chiến thắng vinh quang<br/>
         Chiến thắng âm ti là chính Con Trời
@@ -124,6 +129,7 @@
         Và kìa vinh quang rạng rỡ soi ra<br/>
         Hỡi Chúa yêu thương đến trong tâm này<br/>
         Lòng chính con đây nguyện bước theo Ngài.
+      - <small class='on-background'>trở lại điệp khúc</small><br/>
 - label: homily
   items:
   - label: The Message
