@@ -23,11 +23,11 @@
         Spring Mix Lettuce<br/>
         Lotus Salad with Shrimp & Pork<br/>
         Fresh Fruits
-- label: toasts
+- label: toast
   items:
   - name: David Phạm
     label: Bestman
-    header: Pour the glasses
+    header: Champagne & Cider
     text:
       - Champagne and apple cider are on each table.
         Please designate a person to open them and pour into the glasses.
