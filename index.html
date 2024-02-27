@@ -6,20 +6,7 @@
     <img src='{{ MAIN.logo }}' width=400 alt='{{ MAIN.hero }}' title='{{ MAIN.hero }}' style='max-width: 80svw' />
     <small>{{ MAIN.date }}</small>
 
-    <div class='spacer-2 push-1 special'>
-      {% for item in MAIN.main_menu -%}
-        {% if item.href -%}
-          {% if item.emphasized -%}
-            {% assign em = 'emphasize' -%}
-          {% else -%}
-            {% assign em = '' -%}
-          {% endif -%}
-          <a class='menu-item {{em}}' href='{{ item.href }}' title='{{ item.label }}'>{{ item.label }}</a>
-        {% else -%}
-          <span class='menu-item'>{{ item.label }}</span>
-        {% endif -%}
-      {% endfor -%}
-    </div>
+    {% include menu-outline.html info=MAIN.main_menu %}
     {% include footer.html %}
   </div>
 </main>

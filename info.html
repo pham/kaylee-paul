@@ -6,15 +6,7 @@
     <p class='accent'>{{ MAIN.date_year }}</p>
     <img src='{{ MAIN.logo }}' width=300 alt='{{ MAIN.hero }}' title='{{ MAIN.hero }}' style='max-width: 80svw' />
 
-    <div class='spacer-1 push-2 special'>
-      {% for item in MAIN.info_menu -%}
-        {% if item.href -%}
-          <a class='menu-item' href='{{ item.href }}' title='{{ item.label }}'>{{ item.label }}</a>
-        {% else -%}
-          <span class='menu-item'>{{ item.label }}</span>
-        {% endif -%}
-      {% endfor -%}
-    </div>
+    {% include menu-outline.html info=MAIN.info_menu %}
     {% include footer.html href='/' %}
   </div>
 </main>

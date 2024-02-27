@@ -9,9 +9,9 @@
 - time: 8:00 am
   header: staging
   list:
-  - Photographer (<strong>Vincent Do &middot; (408) 677-0320</strong>)
-  - Videographer (<strong>Alex Kim &middot; (925) 435-8455</strong>)
-  - Bridal hair (<strong>Calvin Hien &middot; (408) 646-0813</strong>)
+  - Photographer (<strong>Vincent Do &middot; 408-677-0320</strong>)
+  - Videographer (<strong>Alex Kim &middot; 925-435-8455</strong>)
+  - Bridal hair (<strong>Calvin Hien &middot; 408-646-0813</strong>)
   - Ushers take positions (<strong>Hưng</strong>)
 - time: 8:30 am
   header: photoshoot 1
@@ -41,11 +41,11 @@
   - Music (<strong>Chính, Kimmie, Daniel</strong>)
   - Ushering guests into ceremony (<strong>Hưng</strong>)
   - Pastor, groom, groomsmen take positions on left side of stage (<strong>Thành, Paul, Nathan, Jadon</strong>)
+  - Seating of parents (<strong>Alvin</strong>)
 - time: 10:00 am
   header: processional
   list:
   - Canon in D (<strong>Trio</strong>)
-  - Seating of parents (<strong>Hưng</strong>)
   - Pastor, groom, groomsmen enter (<strong>Thành, Paul, Nathan, Jadon</strong>)
   - Bridesmaids etner (<strong>Debbie, Sera</strong>)
   - Flower girl enters (<strong>Nora</strong>)
@@ -99,7 +99,7 @@
 - time: 11:30 am
   header: catering
   list:
-  - Caterer arrives (<strong>John Nguyen &middot; (408) 242-8555</strong>)
+  - Caterer arrives (<strong>John Nguyen &middot; 408-242-8555</strong>)
   - Direct caterers to kitchen and side room to setup (<strong>Vinh</strong>)
 - time: 12:15 pm
   header: reception
@@ -111,7 +111,8 @@
   list:
   - Welcoming guests (<strong>Pastor Kiêm</strong>)
   - Introduction of newlywed
-  - Lunch
+  - Introduction of <a href='/modules/vip'>family members and pastors</a>
+  - Lunch time!
 - time: 12:45 pm
   header: performances
   list:
@@ -122,7 +123,7 @@
   list:
   - Bestman (<strong>Minh</strong>)
 - time: 1:15 pm
-  header: cake
+  header: cake cutting
   list:
   - Cut cake (<strong>Paul & Kaylee</strong>)
   - Put cupcakes out (<strong>Vinh</strong>)

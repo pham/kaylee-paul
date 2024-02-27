@@ -185,8 +185,7 @@ h1 + p {
   font-family: var(--font-mono); monospace;
 }
 .emphasize {
-  text-decoration: underline;
-  text-decoration-thickness: from-font;
+  font-size: 1.7em !important;
 }
 
 body::-webkit-scrollbar {
