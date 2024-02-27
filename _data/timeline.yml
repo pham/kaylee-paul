@@ -1,0 +1,142 @@
+- time: 7:00 am
+  header: prepare
+  list:
+  - Wedding party arrives at church
+  - Ushers setup positions in parking lot
+  - Bridal room prep (rings, gowns, etc.)
+  - Groomsmen prep
+  - Certificate for signing
+- time: 8:00 am
+  header: staging
+  list:
+  - Photographer (<strong>Vincent Do &middot; (408) 677-0320</strong>)
+  - Videographer (<strong>Alex Kim &middot; (925) 435-8455</strong>)
+  - Bridal hair (<strong>Calvin Hien &middot; (408) 646-0813</strong>)
+  - Ushers take positions (<strong>Hưng</strong>)
+- time: 8:30 am
+  header: photoshoot 1
+  list:
+  - Bride and groom (<strong>Kaylee & Paul</strong>)
+- time: 8:45 am
+  header: photoshoot 2
+  list:
+  - Prepare for wedding party photoshoots (20 people)
+  - 2 &middot; Kaylee & Paul
+  - 5 &middot; Debbie, Sera, Nathan, Jadon, Nora
+  - 2 &middot; Bố, mẹ
+  - 4 &middot; Chính, Chi, Kimmie, Daniel
+  - 2 &middot; Hưng, Châu
+  - 3 &middot; Minh, Ngân, Ayden
+  - 2 &middot; Alvin, Christine
+- time: 9:00 am
+  header: welcome
+  list:
+  - Parking attendants (<strong>Thiệu, Damon, Nehemi, Ben</strong>)
+  - Ushers (<strong>Thịnh, Matthew, John, David</strong>)
+  - Welcome table (<strong>Lệ, Jana, Lam</strong>)
+  - Welcoming guests (<strong>Kiêm</strong>)
+- time: 9:45 am
+  header: prelude
+  list:
+  - Music (<strong>Chính, Kimmie, Daniel</strong>)
+  - Ushering guests into ceremony (<strong>Hưng</strong>)
+  - Pastor, groom, groomsmen take positions on left side of stage (<strong>Thành, Paul, Nathan, Jadon</strong>)
+- time: 10:00 am
+  header: processional
+  list:
+  - Canon in D (<strong>Trio</strong>)
+  - Seating of parents (<strong>Hưng</strong>)
+  - Pastor, groom, groomsmen enter (<strong>Thành, Paul, Nathan, Jadon</strong>)
+  - Bridesmaids etner (<strong>Debbie, Sera</strong>)
+  - Flower girl enters (<strong>Nora</strong>)
+- time: 10:10 am
+  header: wedding march
+  list:
+  - Lohengrin (<strong>Trio</strong>)
+  - Bride enters (<strong>Kaylee</strong>)
+  - Prayer (<strong>Thành</strong>)
+  - Congregation seated
+  - Inital remarks
+- time: 10:20 am
+  header: scripture readings
+  list:
+  - Vietnamese &middot; 1 Cô-rinh-tô 13 (<strong>Debbie</strong>)
+  - English &middot; 1 Corinthians 13 (<strong>Jadon</strong>)
+- time: 10:30 am
+  header: "worship & homily"
+  list:
+  - <u>O Praise His Name</u> (<strong>Antares</strong>)
+  - <u>I Hold You in My Heart</u> (<strong>Pastor Thành</strong>)
+- time: 10:45 am
+  header: vows
+  list:
+  - Wedding vows (<strong>Paul & Kaylee</strong>)
+  - Ring vows
+  - Blessings (<strong>Pastor Long</strong>)
+- time: 10:50 am
+  header: pronouncement
+  list:
+  - The Kiss
+  - Largo (<strong>Trio</strong>)
+  - Introduction (<strong>Thành</strong>)
+  - Words of gratitude (<strong>Paul & Kaylee</strong>)
+- time: 11:00 am
+  header: recessional
+  list:
+  - Bride and Groom
+  - Bridesmaids
+  - Groomsmen
+  - Flower girl
+  - Annoucements to guests to take pictures (<strong>Kiêm</strong>)
+  - Ushers the guests to the courtyard (<strong>Hưng</strong>)
+  - Wedding cake arrives (<strong>Vinh</strong>)
+- time: 11:15 am
+  header: photobooth
+  list:
+  - Guests lines up outside for pictures
+  - Ushers guests to the photobooth (<strong>Hưng</strong>)
+  - Setting up inside tables and chairs
+- time: 11:30 am
+  header: catering
+  list:
+  - Caterer arrives (<strong>John Nguyen &middot; (408) 242-8555</strong>)
+  - Direct caterers to kitchen and side room to setup (<strong>Vinh</strong>)
+- time: 12:15 pm
+  header: reception
+  list:
+  - Bride & Groom changes clothes
+  - Usher guests into tables (<strong>Hưng</strong>)
+- time: 12:30 pm
+  header: welcome
+  list:
+  - Welcoming guests (<strong>Pastor Kiêm</strong>)
+  - Introduction of newlywed
+  - Lunch
+- time: 12:45 pm
+  header: performances
+  list:
+  - Csárdás by Vittorio Monti (<strong>Nathan</strong>)
+  - Trio (<strong>Kimmie, Debbie, Daniel</strong>)
+- time: 1:00 pm
+  header: toast
+  list:
+  - Bestman (<strong>Minh</strong>)
+- time: 1:15 pm
+  header: cake
+  list:
+  - Cut cake (<strong>Paul & Kaylee</strong>)
+  - Put cupcakes out (<strong>Vinh</strong>)
+- time: 1:20 pm
+  header: bouquet toss
+  list:
+  - Line up the ladies (<strong>Hưng</strong>)
+  - Toss (<strong>Kaylee</strong>)
+- time: 1:30 pm
+  header: group pictures
+  list:
+  - Dance (<strong>Debbie</strong>)
+  - Gather people for a group picture (<strong>Hưng</strong>)
+- time: 2:00 pm
+  header: farewell
+  list:
+  - Final thanks and farewell

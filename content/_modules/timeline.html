@@ -1,0 +1,26 @@
+---
+tree: timeline
+---
+{% assign TIME = site.data.timeline -%}
+<div class='timeline'>
+  <ul>
+    {% for item in TIME -%}
+    <li>
+      <span>{{ item.time }}</span>
+      <div class='content'>
+        <h3>{{ item.header }}</h3>
+        {% if item.list -%}
+        <ul>
+          {% for text in item.list -%}
+            <li>{{ text }}</li>
+          {% endfor -%}
+        </ul>
+        {% endif -%}
+        {% if item.content -%}
+          <p>{{ item.content }}</p>
+        {% endif -%}
+      </div>
+    </li>
+    {% endfor -%}
+  </ul>
+</div>

@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="{{ 'assets/css/tree-horizontal.css' | relative_url }}" />
   {% elsif page.tree == 'vertical' -%}
   <link rel="stylesheet" href="{{ 'assets/css/tree-vertical.css' | relative_url }}" />
+  {% elsif page.tree == 'timeline' -%}
+  <link rel="stylesheet" href="{{ 'assets/css/timeline.css' | relative_url }}" />
   {% endif -%}
 
   {% include head/js.html -%}

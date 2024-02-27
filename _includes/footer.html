@@ -3,7 +3,7 @@
   {% unless include.href -%}
   <span>milpitas</span>
   {% endunless -%}
-  <a href='{{ include.href | default: '/guests' }}'>
+  <a href='{{ include.href | default: '/admin' }}'>
     <img src='{{ MAIN.symbol }}' width=40 alt='{{ MAIN.hero }}' title='{{ MAIN.hero }}' />
   </a>
   {% unless include.href -%}

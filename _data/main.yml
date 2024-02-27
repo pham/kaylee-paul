@@ -22,12 +22,12 @@ main_menu:
   - label: event information
     href: /info
     emphasized: true
-  - label: wedding party
-    href: /modules/party
   - label: ceremony
     href: /modules/ceremony
   - label: reception
     href: /modules/reception
+  - label: wedding party
+    href: /modules/party
   - label: families
     href: /modules/families
 
@@ -38,3 +38,9 @@ info_menu:
     href: /modules/time
   - label: seating
     href: /modules/seating
+
+admin_menu:
+  - label: timeline
+    href: /modules/timeline
+  - label: guests
+    href: /guests
