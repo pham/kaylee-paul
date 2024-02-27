@@ -1,0 +1,21 @@
+---
+tree: timeline
+---
+
+{% assign vip = site.data.vip %}
+
+<div class='timeline'>
+  <ul>
+    <li>
+      <span>12:35 pm</span>
+      <div class='content'>
+        <h3>pastors</h3>
+        <ul>
+          {% for p in vip.pastors -%}
+            <li>{{ p.name }}</li>
+          {% endfor -%}
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
