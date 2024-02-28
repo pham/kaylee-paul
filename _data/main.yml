@@ -36,6 +36,9 @@ info_menu:
     href: /modules/location
   - label: date & time
     href: /modules/time
+  - label: photobooth
+    href: /modules/photobooth
+    emphasized: true
   - label: seating
     href: /modules/seating
 
