@@ -71,7 +71,7 @@ function draw(data) {
 }
 
 async function download(fname='guests.csv') {
-  const passcode = sessionStorage.getItem('bearer');
+  const passcode = LocalStorage.getItem('bearer');
   const info = await list(await aget('/list', passcode));
   if (!info) return false;
 

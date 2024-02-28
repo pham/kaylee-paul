@@ -16,12 +16,12 @@ async function access(e) {
     const pw = passcode.value;
     await aget('/access', pw);
     query('#auth').remove();
-    sessionStorage.setItem('bearer', pw);
+    localStorage.setItem('bearer', pw);
     callback(pw);
   } catch(error) {
     passcode.classList.add('error');
     passcode.value = '';
-    sessionStorage.removeItem('bearer');
+    localStorage.removeItem('bearer');
     console.error(error);
   }
 
@@ -30,7 +30,7 @@ async function access(e) {
 }
 
 (async () => {
-  const bearer = sessionStorage.getItem('bearer');
+  const bearer = localStorage.getItem('bearer');
   const form = query('#auth form');
   const inp = query('#auth input[name="passcode"]');
   const btn = query('#auth-btn');
