@@ -5,6 +5,7 @@ pastors:
   - name: Pastor Joshua Chien
   - name: Pastor & Mrs. Austin Lee
   - name: Pastor & Mrs. DuBayonne Shortridge
+  - name: Pastor & Mrs. SooSang Park
   - name: Mục-sư Lê Văn Kiêm
   - name: Mục-sư & Bà Dương Đức Thịnh
   - name: Mục-sư & Bà Raymond Quan Văn
@@ -14,3 +15,43 @@ pastors:
   - name: Mục-sư Bùi Đức Nguyên
   - name: Mục-sư & Bà Phạm Đức Long
   - name: Mục-sư & Bà Phạm Đức Khôi Nguyên
+
+
+bride:
+  - name: Bố Hoàng Tiến Thắng
+  - name: Mẹ Nguyễn Thị Xuân
+  - name: Chị Hoàng Thu Hường
+  - name: Anh rể Đỗ Hoàng Nam
+  - name: Cháu Đỗ Hoàng Gia-Vinh
+  - name: Cháu Đỗ Hoàng Gia-Hân
+  - name: Chị Hoàng Mai Anh
+  - name: Anh rể Nguyễn Hoàng Nam
+  - name: Cháu Nguyễn Hoàng Ngọc-Anh
+  - name: Cháu Nguyễn Hoàng Nam-Anh
+
+groom:
+  - name: Bố Phạm Đức Long
+  - name: Mẹ Lê Thị Ngọc Mai
+  - name: Chị Phạm Ngọc Triều Thiên
+  - name: Anh rể Lê Ngọc Chính
+  - name: Cháu Lê Thiên Kim
+  - name: Cháu Lê Thiên Thanh
+  - name: Cháu Lê Chính Danh
+  - name: Chị Phạm Ngọc Diễn Châu
+  - name: Anh rể Phạm Ngọc Hưng
+  - name: Cháu Phạm Vinh Quang
+  - name: Cháu Phạm Thiên Thi
+  - name: Cháu Phạm Vương Quyền
+  - name: Em Phạm Đức Nam Minh
+  - name: Em dâu Lê Thị Kim Ngân
+  - name: Cháu Nora Phạm
+  - name: Cháu Ayden Phạm
+  - name: Em Phạm Ngọc Hân
+  - name: Em rể Alvin Tsai
+
+paul:
+  - name: Con trai Lê Văn Lập
+  - name: Con dâu Nguyễn Ngọc Nhi
+  - name: Cháu nội Lê Thiên Khôi
+  - name: Cháu nội Lê Ngọc An Khuê
+  - name: Cháu nội Lê Huy Khiêm

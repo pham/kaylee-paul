@@ -9,6 +9,39 @@ tree: timeline
     <li>
       <span>12:35 pm</span>
       <div class='content'>
+        <h3>bride's family</h3>
+        <ul>
+          {% for p in vip.bride -%}
+            <li>{{ p.name }}</li>
+          {% endfor -%}
+        </ul>
+      </div>
+    </li>
+    <li>
+      <span>12:37 pm</span>
+      <div class='content'>
+        <h3>groom's family</h3>
+        <ul>
+          {% for p in vip.groom -%}
+            <li>{{ p.name }}</li>
+          {% endfor -%}
+        </ul>
+      </div>
+    </li>
+    <li>
+      <span>12:39 pm</span>
+      <div class='content'>
+        <h3>paul's family</h3>
+        <ul>
+          {% for p in vip.paul -%}
+            <li>{{ p.name }}</li>
+          {% endfor -%}
+        </ul>
+      </div>
+    </li>
+    <li>
+      <span>12:40 pm</span>
+      <div class='content'>
         <h3>pastors</h3>
         <ul>
           {% for p in vip.pastors -%}
