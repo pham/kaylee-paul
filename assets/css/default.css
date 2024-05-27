@@ -175,6 +175,17 @@ h1 + p {
   margin: -50px 0 2em 0;
 }
 
+.border > h1,
+.border > h2 {
+  margin: 0;
+  font-size: 1em;
+  color: var(--color-accent);
+  font-family: var(--font-serif), serif;
+}
+.border > h2 {
+  margin-top: -30px;
+}
+
 .name {
   font-family: var(--font-name);
 }

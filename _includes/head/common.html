@@ -3,9 +3,9 @@
     | default: site.description
     | strip_html
     | strip_newlines %}
-{%- assign assets = '/assets/' | prepend: site.url %}
 {%- assign families = info.font_families | join: "&family=" %}
 {%- assign og_image = info.meta.og_image | prepend: '/assets/' %}
+{%- assign canonical = page.url | remove: ".html" | remove: ".md" | prepend: info.url %}
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
@@ -23,9 +23,10 @@
 
   <meta property="og:site_name" content="{{ site.title }}" />
   <meta property="og:description" content="{{ desc }}" />
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:url" content="{{ canonical }}" />
   <meta property="og:image" content="{{ page.image | default: og_image }}" />
 
+  <link rel="canonical" href="{{ canonical }}" />
   <link rel="manifest" href="/assets/site.webmanifest" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
@@ -34,8 +35,8 @@
   <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family={{ families }}&display=swap"
         onload='this.onload=null;this.rel="stylesheet"' />
-  <link rel="shortcut icon" href="/assets/{{ info.meta.favicon }}" />
-  {%- for icon in site.data.icons %}
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/{{ info.meta.favicon }}?" />
+  {%- for icon in info.icons %}
   <link rel="icon" type="{{ icon.type }}" href="{{ icon.href }}" />
   {%- endfor %}
 

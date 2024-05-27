@@ -2,9 +2,10 @@
 ---
 {% assign MAIN = site.data.main %}
 <main>
-  <div class='border'>
+  <div class='border' itemscope itemtype='https://schema.org/Event'>
+    <h1 itemprop='name'>the marriage of</h1>
     <img src='{{ MAIN.logo }}' width=400 alt='{{ MAIN.hero }}' title='{{ MAIN.hero }}' style='max-width: 80svw' />
-    <small>{{ MAIN.date }}</small>
+    <h2 itemprop='startDate' content='2024-02-29T10:00'>{{ MAIN.date }}</h2>
 
     {% include menu-outline.html info=MAIN.main_menu %}
     {% include footer.html %}
