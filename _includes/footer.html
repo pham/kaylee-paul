@@ -2,12 +2,12 @@
 
   <footer>
     {% unless include.href -%}
-    <span itemprop='location'>milpitas</span>
+    <a href='https://nissi.church' itemprop='location'>milpitas</a>
     {% endunless -%}
     <a href='{{ include.href | default: '/admin' }}'>
       <img src='{{ MAIN.symbol }}' width=40 alt='{{ MAIN.hero }}' title='{{ MAIN.hero }}' />
     </a>
     {% unless include.href -%}
-    <span itemprop='location'>saigon</span>
+    <a href='https://sofitel-saigon-plaza.com/meetings/diamond-hall' itemprop='location'>saigon</a>
     {% endunless -%}
   </footer>
